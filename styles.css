@@ -1,0 +1,198 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f9fc; /* Soft white background */
+    color: #333;
+    line-height: 1.7;
+    padding: 0 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #ffffff; /* Clean white background for header */
+    border-bottom: 1px solid #e1e8ed; /* Subtle border */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff; /* Meta-style blue for link */
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+nav ul li a:hover {
+    border-color: #007bff; /* Highlighted blue on hover */
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #e0f1ff 0%, #eaf4ff 100%);
+    padding: 3rem 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 5px solid #007bff; /* Blue border for emphasis */
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #333; /* Dark grey for strong contrast */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #666; /* Light grey text for subheading */
+}
+
+/* Content Sections */
+.content-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 700;
+}
+
+p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #f0f4f8; /* Soft grey-blue background */
+    padding: 4rem 0;
+    border-radius: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #ffffff; /* Clean white card background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e1e8ed; /* Soft border around cards */
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #007bff; /* Blue links to tie the theme */
+    font-weight: 600;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: #007bff; /* Highlight border on hover */
+}
+
+/* Contact Section */
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 1rem;
+}
+
+.contact-list a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    background-color: #f7f9fc;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+    header {
+        padding: 6rem 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+    }
+}
