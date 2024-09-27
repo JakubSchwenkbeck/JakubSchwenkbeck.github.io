@@ -223,6 +223,7 @@ nav ul li a:hover {
 }
 
 
+
 /* Footer */
 footer {
     background-color: #000;
@@ -238,3 +239,123 @@ footer p {
 }
 
 
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background for a clean look */
+    color: #e0e0e0; /* Light text for readability */
+}
+
+/* Navigation */
+nav.dark-mode {
+    background-color: #1f1f1f; /* Dark header bar */
+}
+
+nav.dark-mode ul li a {
+    color: #fff; /* White nav links */
+}
+
+nav.dark-mode ul li a:hover {
+    color: #00aaff; /* Tesla's sleek blue for hover effect */
+}
+
+/* Hero Section */
+.hero.dark-mode {
+    background: linear-gradient(135deg, #0078FF, #00AAFF); /* Meta & Alphabet blue gradient */
+}
+
+.hero.dark-mode h1,
+.hero.dark-mode p {
+    color: #fff; /* White text for contrast */
+}
+
+/* Content Section Styling */
+.content-section.dark-mode {
+    background-color: #1e1e1e; /* Dark background for sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Lighter shadow for depth */
+}
+
+.content-section.dark-mode h2 {
+    color: #fff; /* Light heading text for readability */
+}
+
+/* About Me Section */
+#about.dark-mode p {
+    color: #bbb; /* Light text color */
+}
+
+/* Projects Section */
+.project-card.dark-mode {
+    background-color: #2a2a2a; /* Dark background for project cards */
+    border-radius: 10px;
+    color: #e0e0e0; /* Light text for project details */
+}
+
+.project-card.dark-mode a {
+    color: #00aaff; /* Blue links for dark mode */
+}
+
+.project-card.dark-mode:hover {
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2); /* Lighter shadow on hover */
+}
+
+/* Work Experience Section */
+.experience-item.dark-mode {
+    background-color: #2a2a2a; /* Dark background for work items */
+    color: #e0e0e0; /* Light text color */
+}
+
+.experience-details.dark-mode h3 {
+    color: #e0e0e0; /* Light title color */
+}
+
+/* Footer */
+footer.dark-mode {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+.toggle-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-container input {
+    display: none; /* Hide the checkbox */
+}
+
+.toggle-switch {
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 50px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.toggle-switch::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+input:checked + .toggle-switch {
+    background-color: #007396; /* Change background color when checked */
+}
+
+input:checked + .toggle-switch::before {
+    transform: translateX(26px); /* Move the toggle knob to the right */
+}
+
+.toggle-label {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #333; /* Light text color */
+}
