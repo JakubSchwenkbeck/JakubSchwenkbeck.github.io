@@ -7,14 +7,19 @@
     <title>Jakub Schwenkbeck</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	 <!-- Include the p5.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
 <body>
     <header>
+	
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+				  <button id="reset-button" style="position: absolute; top: 5px; left: 15px; padding: 8px; background-color: #0078FF; color: white; border: none; border-radius: 4px; cursor: pointer;">Reset</button>
+
 				
             </ul>
 			<label class="toggle-container">
@@ -24,14 +29,51 @@
 </label>
 
         </nav>
-        <div class="hero">
+        <div class="hero" id="interactive-hero">
             <img src="Profile_Picture.jpg" alt="Profile Picture" class="profile-pic">
             <div class="hero-text">
                 <h1>Jakub Schwenkbeck</h1>
                 <p>Computer Science Student, Developer</p>
             </div>
+			 
         </div>
     </header>
+	 <!-- p5.js Sketch for Drawing Effect Only in Hero Section -->
+    <script>
+        let hero;
+
+        function setup() {
+            // Select the hero section
+            hero = document.getElementById('interactive-hero');
+            
+            // Create a canvas with the same width and height as the hero
+            let canvas = createCanvas(hero.offsetWidth, hero.offsetHeight);
+            canvas.position(hero.offsetLeft, hero.offsetTop); // Position inside the hero section
+            //canvas.style('z-index', '-1'); // Ensure canvas is behind other hero content
+            canvas.parent(hero); // Attach canvas to hero section
+            
+            background(0, 0, 0, 0); // Transparent background
+        }
+
+        function draw() {
+            // Draw only when mouse is pressed within the hero section
+            if (mouseIsPressed && mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+                stroke(255, 204, 0); // Yellow stroke color for visibility
+                strokeWeight(3); // Set line thickness
+                line(mouseX, mouseY, pmouseX, pmouseY); // Draw line based on mouse movement
+            }
+        }
+
+        // Adjust canvas size when the window or hero section is resized
+        function windowResized() {
+            resizeCanvas(hero.offsetWidth, hero.offsetHeight);
+        }
+		  // Reset button functionality
+        document.getElementById('reset-button').onclick = function() {
+            clear(); // Clear the canvas
+            background(0, 0, 0, 0); // Reset background
+        };
+    </script>
 
     <main>
         <!-- About Me Section -->
@@ -177,7 +219,7 @@
             <p>Feel free to reach out via:</p>
             <ul class="contact-list">
                 <li><a href="https://github.com/JakubSchwenkbeck" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/jakubschwenkbeck" target="_blank">LinkedIn</a></li>
+                <li><a href="https://linkedin.com/in/Jakub-Schwenkbeck" target="_blank">LinkedIn</a></li>
             </ul>
         </section>
     </main>
