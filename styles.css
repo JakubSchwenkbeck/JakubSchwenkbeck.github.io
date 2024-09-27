@@ -149,6 +149,25 @@ nav ul li a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* GitHub Stats Container */
+.github-stats-container {
+    text-align: center; /* Center the image horizontally */
+    padding: 20px;
+    margin: 30px auto; /* Space around the container */
+    max-width: 500px; /* Max width for the container */
+    background-color: #2a2a2a; /* Dark background for contrast */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* GitHub Stats Image */
+.github-stats {
+    width: 100%; /* Make the image responsive */
+    max-width: 450px; /* Set a maximum width */
+    height: auto; /* Keep the aspect ratio */
+    border-radius: 10px; /* Slight rounding for the image corners */
+}
+
 /* Contact Section */
 .contact-list {
     list-style: none;
