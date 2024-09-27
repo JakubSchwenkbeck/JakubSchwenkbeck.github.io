@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,192 +7,176 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f7f9fc; /* Soft white background */
-    color: #333;
-    line-height: 1.7;
-    padding: 0 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #f5f6fa; /* Light background for a clean look */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
-/* Header Styles */
-header {
-    padding: 4rem 0;
-    text-align: center;
-    background-color: #ffffff; /* Clean white background for header */
-    border-bottom: 1px solid #e1e8ed; /* Subtle border */
+/* Navigation */
+nav {
+    background-color: #000; /* Dark header bar */
+    padding: 1rem;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin-bottom: 2rem;
+    justify-content: flex-end;
+    list-style: none;
 }
 
 nav ul li {
-    margin: 0 1.5rem;
+    margin-left: 2rem;
 }
 
 nav ul li a {
+    color: #fff; /* White nav links */
     text-decoration: none;
-    color: #007bff; /* Meta-style blue for link */
-    font-weight: 700;
-    font-size: 1.1rem;
-    padding-bottom: 0.2rem;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    border-color: #007bff; /* Highlighted blue on hover */
+    color: #00aaff; /* Tesla's sleek blue for hover effect */
 }
 
+/* Hero Section */
 .hero {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
-    background: linear-gradient(135deg, #e0f1ff 0%, #eaf4ff 100%);
-    padding: 3rem 0;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    justify-content: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #0078FF, #00AAFF); /* Meta & Alphabet blue gradient */
+    color: #fff; /* White text for contrast */
 }
 
 .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: 5px solid #007bff; /* Blue border for emphasis */
+    margin-right: 2rem;
+    border: 4px solid #fff;
 }
 
-.hero-text h1 {
-    font-size: 2.5rem;
+.hero h1 {
+    font-size: 3rem;
     margin-bottom: 0.5rem;
-    font-weight: 700;
-    color: #333; /* Dark grey for strong contrast */
 }
 
-.hero-text p {
+.hero p {
     font-size: 1.2rem;
-    color: #666; /* Light grey text for subheading */
+    opacity: 0.8;
 }
 
-/* Content Sections */
+/* Content Section Styling */
 .content-section {
-    padding: 4rem 0;
-    text-align: center;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #333;
-    font-weight: 700;
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #0078FF; /* Blue accent for headings */
+    padding-left: 1rem;
 }
 
-p {
-    max-width: 700px;
-    margin: 0 auto;
+/* About Me Section */
+#about p {
     font-size: 1.1rem;
-    color: #555;
+    line-height: 1.8;
+    color: #666;
 }
 
 /* Projects Section */
-#projects {
-    background-color: #f0f4f8; /* Soft grey-blue background */
-    padding: 4rem 0;
-    border-radius: 20px;
-}
-
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 1.5rem;
 }
 
 .project-card {
-    background-color: #ffffff; /* Clean white card background */
-    padding: 2rem;
+    background-color: #f1f1f1;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #e1e8ed; /* Soft border around cards */
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #333;
 }
 
 .project-card p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
 }
 
 .project-card a {
     text-decoration: none;
-    color: #007bff; /* Blue links to tie the theme */
-    font-weight: 600;
+    color: #00aaff; /* Alphabet’s clean blue for links */
+    font-weight: bold;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border-color: #007bff; /* Highlight border on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Languages Section */
+.languages-list ul {
+    list-style: none;
+}
+
+.languages-list li {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.stats-image {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.stats-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Section */
 .contact-list {
     list-style: none;
-    padding: 0;
-}
-
-.contact-list li {
-    margin-bottom: 1rem;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .contact-list a {
     text-decoration: none;
-    font-size: 1.2rem;
-    color: #007bff;
-    font-weight: 600;
+    color: #00aaff; /* Blue links for consistency */
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .contact-list a:hover {
-    text-decoration: underline;
+    color: #0078FF;
 }
 
 /* Footer */
 footer {
-    padding: 2rem 0;
+    background-color: #000;
+    color: #fff;
     text-align: center;
-    font-size: 0.9rem;
-    color: #777;
-    background-color: #f7f9fc;
+    padding: 1rem;
+    margin-top: 3rem;
 }
 
-/* Media Queries for Larger Screens */
-@media (min-width: 768px) {
-    header {
-        padding: 6rem 0;
-    }
-
-    nav ul li a {
-        font-size: 1.2rem;
-    }
-
-    .hero-text h1 {
-        font-size: 3rem;
-    }
-
-    .profile-pic {
-        width: 180px;
-        height: 180px;
-    }
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
