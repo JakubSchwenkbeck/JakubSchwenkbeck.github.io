@@ -45,7 +45,9 @@
             </p>
         </section>
 
-        <!-- Work Experience Section -->
+        
+
+<!-- Work Experience Section -->
 <section id="experience" class="content-section">
     <h2>Work Experience</h2>
     <div class="experience-item">
@@ -57,7 +59,7 @@
                 <a href="https://www.marelli.com/" target="_blank" class="marelli-link">Software Developer at Marelli</a>
             </h3>
             <p>
-                As a software developer at Marelli, I contributed to the design and development of a large-scale, internationally deployed software solution in the automotive industry. This project involved intricate mathematical modeling and physical simulations for developement of high class automotive vehicles across the globe.
+                As a software developer at Marelli, I contributed to the design and development of a large-scale, internationally deployed software solution in the automotive industry. This project involved intricate mathematical modeling and physical simulations for development of high-class automotive vehicles across the globe.
             </p>
             <p>
                 My role encompassed creating user-friendly graphical interfaces (GUIs) using MATLAB, implementing algorithms to solve complex problems, and employing object-oriented programming principles. I collaborated with interdisciplinary teams to integrate various technologies, ensuring seamless functionality and delivering high-quality software solutions.
@@ -65,6 +67,7 @@
         </div>
     </div>
 </section>
+
 
         <!-- Projects Section -->
         <section id="projects" class="content-section">
@@ -83,7 +86,7 @@
     <p>A real-time object tracking system using a custom-built Convolutional Neural Network (CNN) in Java, performing AI-powered object recognition.</p>
     <a href="https://github.com/JakubSchwenkbeck/Object-Recognition-Prediction" target="_blank">View on GitHub</a>
     <div class="project-languages">
-        <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=java&logoColor=white" alt="Java Badge">
+        <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=java&logoColor=007396 " alt="Java Badge">
     </div>
 </div>
 <div class="project-card">
@@ -122,7 +125,6 @@
 
             </div>
         </section>
-
 
 
         <!-- Top Languages Section -->
@@ -181,7 +183,19 @@
 	<script>
 document.getElementById('dark-mode-toggle').onclick = function() {
     document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled'); // Save preference
 };
+
+// On page load, check for dark mode preference in local storage
+window.onload = function() {
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('dark-mode-toggle').checked = true;
+    }
+};
+
 </script>
 
 </body>
