@@ -211,6 +211,16 @@ nav ul li a:hover {
     line-height: 1.6; /* Increase line height for readability */
     color: #555; /* Slightly lighter text color */
 }
+.project-languages {
+    margin-top: 10px; /* Space above the language badges */
+}
+
+.project-languages img {
+    width: 50 px; /* Set width for uniformity */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Space between badges */
+    vertical-align: middle; /* Align badges with text */
+}
 
 
 /* Footer */
