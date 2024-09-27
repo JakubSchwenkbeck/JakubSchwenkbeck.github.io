@@ -166,6 +166,52 @@ nav ul li a:hover {
 .contact-list a:hover {
     color: #0078FF;
 }
+/* Work Experience Section */
+/* Work Experience Section */
+/* General Content Section Styles */
+.content-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Work Experience Item Styles */
+.experience-item {
+    display: flex;
+    align-items: flex-start; /* Align items to the start */
+    margin-bottom: 30px; /* Space between items */
+    padding: 20px;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.company-link {
+    margin-right: 20px; /* Space between logo and text */
+}
+
+.company-logo {
+    width: 80px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.experience-details {
+    flex-grow: 1; /* Allow details to take remaining space */
+}
+
+.experience-details h3 {
+    margin: 0 0 10px 0; /* Margin below the title */
+    font-size: 1.5rem; /* Adjust title size */
+    color: #333; /* Dark text for contrast */
+}
+
+.experience-details p {
+    margin: 5px 0; /* Space between paragraphs */
+    line-height: 1.6; /* Increase line height for readability */
+    color: #555; /* Slightly lighter text color */
+}
+
 
 /* Footer */
 footer {
@@ -180,3 +226,5 @@ footer p {
     font-size: 0.9rem;
     opacity: 0.8;
 }
+
+
