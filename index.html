@@ -58,9 +58,13 @@
         function draw() {
             // Draw only when mouse is pressed within the hero section
             if (mouseIsPressed && mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
-                stroke(255, 204, 0); // Yellow stroke color for visibility
-                strokeWeight(3); // Set line thickness
-                line(mouseX, mouseY, pmouseX, pmouseY); // Draw line based on mouse movement
+				
+				// check to not overdraw content
+				if(mouseX < width/4 || mouseX > 3 * width/4){
+					stroke(255, 204, 0); // Yellow stroke color for visibility
+					strokeWeight(3); // Set line thickness
+					line(mouseX, mouseY, pmouseX, pmouseY); // Draw line based on mouse movement
+				}
             }
         }
 
