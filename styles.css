@@ -332,78 +332,105 @@ nav.dark-mode ul li a {
 nav.dark-mode ul li a:hover {
     color: #00aaff; /* Hover color for nav links */
 }
-
 /* Hero Section */
-.hero.dark-mode {
+body.dark-mode .hero {
     background: linear-gradient(135deg, #0078FF, #00AAFF); /* Keep the gradient */
 }
 
-.hero.dark-mode h1,
-.hero.dark-mode p {
+body.dark-mode .hero h1,
+body.dark-mode .hero p {
     color: #e0e0e0; /* Light text for hero section */
-}
-
-/* Content Section Styling */
-.content-section.dark-mode {
+}/* Content Section Styling */
+body.dark-mode .content-section {
     background-color: #2a2a2a; /* Dark grey background for sections */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
 }
 
-.content-section.dark-mode h2 {
+body.dark-mode .content-section h2 {
     color: #e0e0e0; /* Light heading text */
     border-left: 5px solid #00aaff; /* Blue accent for headings in dark mode */
 }
 
 /* About Section */
-#about.dark-mode p {
+body.dark-mode #about p {
     color: #bbbbbb; /* Light grey text for about section */
 }
 
+/* Work Experience Section Styling for Dark Mode */
+body.dark-mode #experience {
+    background-color: #2a2a2a; /* Dark grey background for dark mode */
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Darker shadow for subtle depth */
+    color: #e0e0e0; /* Light text for readability */
+    text-align: left;
+}
+
+body.dark-mode #experience h3 {
+    color: #e0e0e0; /* Light color for headings in work experience */
+}
+
+body.dark-mode #experience p {
+    color: #bbbbbb; /* Light grey paragraph text in work experience */
+}
+
+body.dark-mode #experience a {
+    color: #00aaff; /* Blue links for dark mode */
+}
+
+body.dark-mode #experience a:hover {
+    color: #00ccff; /* Lighter hover color for links */
+}
+
 /* Projects Section */
-.project-card.dark-mode {
-    background-color: #2a2a2a; /* Dark grey background for project cards */
+body.dark-mode .project-card {
+    background-color: #3a3a3a; /* Slightly lighter grey for project cards */
     border-radius: 10px;
     color: #e0e0e0; /* Light text for project details */
 }
 
-.project-card.dark-mode:hover {
+body.dark-mode .project-card:hover {
     box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2); /* Light hover shadow */
 }
 
-.project-card.dark-mode a {
+body.dark-mode .project-card a {
     color: #00aaff; /* Blue links for dark mode */
 }
+body.dark-mode .project-card p {
+    color: #cccccc; /* Light grey text for paragraph content */
+}
+
 
 /* Work Experience Section */
-.experience-item.dark-mode {
-    background-color: #2a2a2a; /* Dark grey background for work experience cards */
+body.dark-mode .experience-item {
+    background-color: #3a3a3a; /* Slightly lighter grey for experience cards */
     color: #e0e0e0; /* Light text */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Dark shadow for depth */
 }
 
-.experience-item.dark-mode:hover {
+body.dark-mode .experience-item:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker hover shadow */
 }
 
-.experience-details.dark-mode h3 {
+body.dark-mode .experience-details h3 {
     color: #e0e0e0; /* Light heading text for work experience */
 }
 
-.experience-details.dark-mode p {
+body.dark-mode .experience-details p {
     color: #bbbbbb; /* Light grey paragraph text */
 }
 
-.experience-details.dark-mode h3 a {
+body.dark-mode .experience-details h3 a {
     color: #00aaff; /* Blue links for headings in work experience */
 }
 
-.experience-details.dark-mode h3 a:hover {
+body.dark-mode .experience-details h3 a:hover {
     color: #00ccff; /* Lighter hover color for links */
 }
 
 /* Footer */
-footer.dark-mode {
+body.dark-mode footer {
     background-color: #1f1f1f; /* Dark grey footer background */
     color: #e0e0e0; /* Light footer text */
 }
