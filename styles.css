@@ -501,3 +501,40 @@ input:checked + .toggle-switch::before {
     font-size: 16px;
     color: #333; /* Light text color */
 }
+/* Blog Section */
+#blog {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-post {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3 a {
+    color: #0078FF;
+    text-decoration: none;
+}
+
+.blog-post h3 a:hover {
+    text-decoration: underline;
+}
+
+.read-more {
+    color: #0078FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
