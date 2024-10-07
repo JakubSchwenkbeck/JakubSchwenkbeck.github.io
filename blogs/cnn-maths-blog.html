@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Blog - Mathematical Foundations of Convolutional Neural Networks (CNNs)</title>
+    <!-- Include MathJax for rendering LaTeX -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About Me</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a href="../index.html#blog">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article class="blog-post-content">
+        <h1>Mathematical Foundations of Convolutional Neural Networks (CNNs)</h1>
+        <p>Published on October 7, 2024</p>
+
+        <p>Convolutional Neural Networks (CNNs) are powerful computational models that have revolutionized the field of deep learning and computer vision. In this post, we’re diving into the mathematical foundations of key CNN layers: Fully Connected, Convolutional, and Max Pooling. Let’s break it down!</p>
+
+        <h2>1. What Are Convolutional Neural Networks?</h2>
+        <p>Convolutional Neural Networks (CNNs) are designed to process and analyze visual data. By mimicking human visual processing, they excel in tasks like image classification and object detection.</p>
+
+        <h2>2. Fully Connected Layers</h2>
+        <p>Fully Connected (FC) layers are typically found at the end of CNN architectures. They connect every neuron in one layer to every neuron in the next layer, allowing the model to combine learned features effectively.</p>
+        <p>The output of an FC layer can be represented mathematically as:</p>
+        <p>
+            $$ \mathbf{y} = \sigma(\mathbf{W} \mathbf{x} + \mathbf{b}) $$
+        </p>
+        <p>Where:</p>
+        <ul>
+            <li> \( \mathbf{y} \) = output vector.</li>
+            <li> \( \sigma \) = activation function (e.g., ReLU, sigmoid).</li>
+            <li> \( \mathbf{W} \) = weight matrix.</li>
+            <li> \( \mathbf{x} \) = input vector.</li>
+            <li> \( \mathbf{b} \) = bias vector.</li>
+        </ul>
+        <p>Here’s a simple diagram of a Fully Connected layer (to be added later).</p>
+
+        <h2>3. Convolutional Layers</h2>
+        <p>Convolutional layers are the backbone of CNNs. They help extract features from the input data, recognizing patterns like edges and textures.</p>
+        <p>The convolution operation can be described as:</p>
+        <p>
+            $$ (\mathbf{f} * \mathbf{g})(i,j) = \sum_m \sum_n \mathbf{f}(m,n) \cdot \mathbf{g}(i-m,j-n) $$
+        </p>
+        <p>Where:</p>
+        <ul>
+            <li> \( \mathbf{f} \) = input image (or feature map).</li>
+            <li> \( \mathbf{g} \) = filter (or kernel).</li>
+            <li> \( (i,j) \) = position of the output feature map.</li>
+        </ul>
+        <p>Check out this diagram illustrating the convolution operation (to be added later).</p>
+
+        <h2>4. Max Pooling Layers</h2>
+        <p>Max Pooling layers reduce the spatial dimensions of the feature maps, helping retain the most important features while lowering computation.</p>
+        <p>The Max Pooling operation can be defined as:</p>
+        <p>
+            $$ \mathbf{y}_{i,j} = \max_{m,n} \mathbf{x}_{2i+m, 2j+n} $$
+        </p>
+        <p>Where:</p>
+        <ul>
+            <li> \( \mathbf{y} \) = pooled output.</li>
+            <li> \( \mathbf{x} \) = input feature map.</li>
+            <li> \( (i,j) \) = position in the output after pooling.</li>
+        </ul>
+        <p>This diagram shows how Max Pooling is applied to a feature map (to be added later).</p>
+
+        <h2>5. Putting It All Together</h2>
+        <p>These layers work in tandem to create powerful CNN architectures capable of handling complex visual data. Understanding their mathematical foundations is key to leveraging their potential effectively.</p>
+
+        <h2>6. Conclusion</h2>
+        <p>Understanding the math behind CNN layers equips you with the knowledge to build and optimize these models. With these concepts under your belt, you're ready to dive deeper into the world of deep learning. Happy coding!</p>
+
+        <h2>Call to Action</h2>
+        <p>Have thoughts or questions? Contact me! And don’t forget to follow my blog for more insights into deep learning and AI.</p>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2024 Jakub Schwenkbeck. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
