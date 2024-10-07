@@ -564,3 +564,65 @@ body.dark-mode .read-more {
 body.dark-mode .read-more:hover {
     color: #00ccff; /* Lighter hover color for read more links */
 }
+
+/* Blog Post Content Styling */
+.blog-post-content {
+    max-width: 800px; /* Limiting width for better readability */
+    margin: 0 auto; /* Centering the content */
+    padding: 20px; /* Inner padding */
+    background-color: #fff; /* White background for posts */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.blog-post-content h1 {
+    font-size: 2.5em; /* Size for main title */
+    color: #0078FF; /* Tesla blue for main title */
+    margin-bottom: 15px; /* Space below the main title */
+}
+
+.blog-post-content h2 {
+    font-size: 2em; /* Size for subheadings */
+    color: #0078FF; /* Tesla blue for subheadings */
+    margin-top: 20px; /* Space above subheadings */
+    margin-bottom: 10px; /* Space below subheadings */
+}
+
+.blog-post-content h3 {
+    font-size: 1.75em; /* Size for third-level headings */
+    color: #333; /* Dark gray for headings */
+    margin-top: 15px; /* Space above third-level headings */
+    margin-bottom: 10px; /* Space below third-level headings */
+}
+
+.blog-post-content p {
+    line-height: 1.6; /* Improved line height for readability */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.blog-post-content ul {
+    margin-left: 20px; /* Indentation for lists */
+    margin-bottom: 15px; /* Space below lists */
+}
+
+.blog-post-content ul li {
+    margin-bottom: 10px; /* Space below list items */
+}
+
+/* Dark Mode Styling for Blog Post Content */
+body.dark-mode .blog-post-content {
+    background-color: #3c3c3c; /* Dark background for posts */
+    color: #e0e0e0; /* Light text for readability */
+}
+
+body.dark-mode .blog-post-content h1,
+body.dark-mode .blog-post-content h2,
+body.dark-mode .blog-post-content h3 {
+    color: #00aaff; /* Blue for headings in dark mode */
+}
+
+body.dark-mode .blog-post-content p,
+body.dark-mode .blog-post-content ul li {
+    color: #e0e0e0; /* Light text for paragraphs and list items */
+}
+
