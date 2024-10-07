@@ -538,3 +538,29 @@ input:checked + .toggle-switch::before {
 .read-more:hover {
     text-decoration: underline;
 }
+/* Dark Mode Styling for Blog Section */
+body.dark-mode #blog {
+    background-color: #2a2a2a; /* Dark grey background for dark mode */
+    padding: 50px; /* Same padding for consistency */
+}
+
+body.dark-mode .blog-post {
+    background-color: #3c3c3c; /* Dark background for blog posts */
+    color: #e0e0e0; /* Light text for readability */
+}
+
+body.dark-mode .blog-post h3 a {
+    color: #00aaff; /* Blue links for dark mode */
+}
+
+body.dark-mode .blog-post h3 a:hover {
+    color: #00ccff; /* Lighter hover color for links */
+}
+
+body.dark-mode .read-more {
+    color: #00aaff; /* Blue read more link for dark mode */
+}
+
+body.dark-mode .read-more:hover {
+    color: #00ccff; /* Lighter hover color for read more links */
+}
