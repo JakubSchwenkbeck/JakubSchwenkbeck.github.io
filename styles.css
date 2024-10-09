@@ -719,7 +719,9 @@ body.dark-mode .blog-post h3 a {
 body.dark-mode .blog-post h3 a:hover {
     color: #00ccff;
 }
-
+body.dark-mode .blog-pst p3 {
+    color: #555;
+}
 body.dark-mode .read-more {
     color: #00aaff;
 }
