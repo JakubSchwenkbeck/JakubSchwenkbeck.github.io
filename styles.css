@@ -626,3 +626,162 @@ body.dark-mode .blog-post-content ul li {
     color: #e0e0e0; /* Light text for paragraphs and list items */
 }
 
+
+/* Blog Section Enhancements */
+#blog {
+    padding: 50px;
+    background-color: #f9f9f9;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the blog section */
+}
+
+/* Blog Posts Container */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Increased gap between posts for better spacing */
+}
+
+/* Blog Post Card */
+.blog-post {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Blog Post Title */
+.blog-post h3 a {
+    font-size: 1.75rem;
+    color: #0078FF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-post h3 a:hover {
+    color: #00AAFF;
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Blog Post Date */
+.blog-post .post-date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* Blog Post Description */
+.blog-post p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Read More Link */
+.read-more {
+    align-self: flex-end; /* Align to the right */
+    color: #0078FF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #00AAFF;
+    text-decoration: underline;
+}
+
+/* Dark Mode Styling for Blog Section */
+body.dark-mode #blog {
+    background-color: #2a2a2a; /* Dark background for dark mode */
+    padding: 50px;
+}
+
+body.dark-mode .blog-post {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .blog-post h3 a {
+    color: #00aaff;
+}
+
+body.dark-mode .blog-post h3 a:hover {
+    color: #00ccff;
+}
+
+body.dark-mode .read-more {
+    color: #00aaff;
+}
+
+body.dark-mode .read-more:hover {
+    color: #00ccff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .blog-posts {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+/* Featured Blog Post */
+.featured-blog-post {
+    grid-column: span 2; /* Span across two columns on larger screens */
+    background: linear-gradient(135deg, #0078FF, #00AAFF); /* Gradient background for emphasis */
+    color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for featured post */
+}
+
+.featured-blog-post:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced hover effect */
+}
+
+.featured-blog-post h3 a {
+    color: #fff;
+}
+
+.featured-blog-post .post-date {
+    color: #e0e0e0;
+}
+
+/* Blog Post Category Label */
+.blog-post-category {
+    background-color: #0078FF;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.featured-blog-post .blog-post-category {
+    background-color: white;
+    color: #0078FF; /* Inverted colors for featured post */
+}
+
+/* Blog Post Image */
+.blog-post img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    max-height: 180px; /* Limit the height */
+}
+
+
