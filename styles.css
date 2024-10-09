@@ -787,3 +787,11 @@ body.dark-mode .read-more:hover {
 }
 
 
+#blog a h2 {
+    text-decoration: none;
+    color: inherit;
+}
+
+#blog a h2:hover {
+    text-decoration: underline; /* Add an underline effect on hover if desired */
+}
