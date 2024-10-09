@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog | Jakub Schwenkbeck</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#blog" class="active">Blog</a></li>
+            </ul>
+        </nav>
+        <h1 class="page-title">Blog</h1>
+    </header>
+
+    <main>
+        <!-- Search bar for blog -->
+        <section id="blog-search">
+            <input type="text" placeholder="Search blog posts..." class="search-bar">
+        </section>
+
+        <!-- Featured post section -->
+        <section id="featured-post">
+            <h2>Featured Post</h2>
+            <article class="blog-post featured">
+                <h3><a href="blogs/cnn-maths-blog.html">Mathematical Foundations of Convolutional Neural Networks (CNNs)</a></h3>
+                <p>This post dives into the mathematical foundations of CNN layers: Fully Connected, Convolutional, and Max Pooling.</p>
+                <a href="blogs/cnn-maths-blog.html" class="read-more">Read more</a>
+            </article>
+        </section>
+
+        <!-- Recent posts section -->
+        <section id="recent-posts">
+            <h2>Recent Posts</h2>
+            <div class="blog-posts">
+                <article class="blog-post">
+                    <h3><a href="blogs/blog-post-matlab.html">Why Matlab might be a good choice for your next Project</a></h3>
+                    <p>This post explores the pros and cons of using MATLAB as a high-level programming language.</p>
+                    <a href="blogs/blog-post-matlab.html" class="read-more">Read more</a>
+                </article>
+               <article class="blog-post featured">
+                <h3><a href="blogs/cnn-maths-blog.html">Mathematical Foundations of Convolutional Neural Networks (CNNs)</a></h3>
+                <p>This post dives into the mathematical foundations of CNN layers: Fully Connected, Convolutional, and Max Pooling.</p>
+                <a href="blogs/cnn-maths-blog.html" class="read-more">Read more</a>
+            </article>
+                <!-- Add more posts similarly -->
+            </div>
+        </section>
+
+        <!-- Categories and tags -->
+        <section id="categories-tags">
+            <h2>Categories</h2>
+            <ul class="categories-list">
+                <li><a href="#">Machine Learning</a></li>
+                <li><a href="#">Software Development</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Physics</a></li>
+            </ul>
+
+            <h2>Tags</h2>
+            <ul class="tags-list">
+                <li><a href="#">AI</a></li>
+                <li><a href="#">Neural Networks</a></li>
+                <li><a href="#">MATLAB</a></li>
+                <li><a href="#">Rust</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </section>
+
+        <!-- Pagination -->
+        <section id="pagination">
+            <a href="#" class="prev-page">&laquo; Previous</a>
+            <a href="#" class="next-page">Next &raquo;</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="social-share">
+            <p>Share this blog:</p>
+            <a href="https://twitter.com/share?text=Check out this awesome blog post!&url=https://yoursite.com/blog" target="_blank">Twitter</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://yoursite.com/blog" target="_blank">Facebook</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://yoursite.com/blog" target="_blank">LinkedIn</a>
+        </div>
+        <p>&copy; 2024 Jakub Schwenkbeck. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Basic search bar functionality for filtering posts
+        document.querySelector('.search-bar').addEventListener('input', function() {
+            let query = this.value.toLowerCase();
+            document.querySelectorAll('.blog-post').forEach(function(post) {
+                let title = post.querySelector('h3').innerText.toLowerCase();
+                post.style.display = title.includes(query) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
