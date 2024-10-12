@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog - Behavior Classification for Autonomous Vehicles</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About Me</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a href="../index.html#blog">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article class="blog-post-content">
+        <h1>Behavior Classification for Autonomous Vehicles: A Journey Through My Project</h1>
+        <p>Published on October 12, 2024</p>
+
+        <p>Autonomous vehicles represent a complex frontier in modern technology, and one key challenge they face is classifying the behavior of surrounding objects to ensure safe navigation. This blog post details my experience in developing a behavior classification model for autonomous driving scenarios using MATLAB and Simulink, a project I contributed to as part of the MATLAB-Simulink Challenge.</p>
+
+        <h2>How It All Started</h2>
+        <p>I’ve always been fascinated by artificial intelligence and its real-world applications, particularly in the automotive industry. When I came across the MATLAB-Simulink Challenge, I knew it was the perfect opportunity to combine my passion for AI with my experience in MATLAB. As a computer science student working towards my bachelor’s degree, tackling this project, typically classified for master’s or doctoral-level work, was both thrilling and daunting.</p>
+        <p>I began by defining the problem: classifying the behavior of objects around autonomous vehicles as either safe or risky. The goal was to use Recurrent Neural Networks (RNNs) to analyze time-series data from vehicle sensors and predict potential risks. With MATLAB’s Automated Driving Toolbox™ and Deep Learning Toolbox™, I was ready to get started.</p>
+
+        <h2>The Process</h2>
+        <h3>Data Collection and Transformation</h3>
+        <p>The project kicked off with scene creation using MATLAB’s Scenario Designer, where I simulated various driving situations, including traffic, pedestrians, and different driving behaviors. The sensor data was exported and then cleaned using a custom script. I implemented data augmentation to expand the training dataset by simulating variations in sensor readings.</p>
+
+        <h3>Model Development</h3>
+        <p>Given the time-dependent nature of traffic data, I selected an RNN for its ability to capture temporal dependencies. The model consisted of LSTM layers, which are particularly effective for time-series analysis. I trained the RNN using a dataset of vehicle and pedestrian trajectories, labeled as safe or risky, achieving a classification accuracy of 95%-99%.</p>
+
+        <h3>Scenario Simulation and Evaluation</h3>
+        <p>After training, I generated several driving scenarios to test and visualize the model’s performance. By using MATLAB’s visualization tools, I was able to see the classification results in real-time, comparing them to ground truth data. I also created a GUI to facilitate interaction with the various scenarios.</p>
+
+        <h2>Challenges and Integrations</h2>
+        <p>One of the more interesting challenges was integrating a Java-based object recognition model with MATLAB. By connecting the two through a custom interface, I was able to incorporate visual data directly from the vehicle’s sensors, adding another layer of risk classification based on object recognition and movement predictions.</p>
+
+        <h2>Final Thoughts and Next Steps</h2>
+        <p>This project has been an incredible learning experience. It showcased how RNNs can be leveraged for behavior classification in autonomous vehicles and highlighted the importance of data preprocessing and model selection. While I am proud of the results, I see this as just the beginning.</p>
+        <p>Future work will focus on integrating real-world data to further validate the model and exploring additional features like movement prediction using more advanced AI models. There's also potential for deploying this trained model in real-time autonomous systems.</p>
+
+        <p>Through this project, I’ve not only deepened my knowledge of MATLAB but also gained valuable experience in merging AI with practical applications in autonomous driving. Stay tuned for more updates as I continue to refine and expand on this exciting project!</p>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2024 Jakub Schwenkbeck. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
