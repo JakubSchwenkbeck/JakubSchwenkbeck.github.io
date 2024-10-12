@@ -35,8 +35,8 @@
         <h3>Data Collection and Transformation</h3>
         <p>The project kicked off with scene creation using MATLAB’s Scenario Designer, where I simulated various driving situations, including traffic, pedestrians, and different driving behaviors. The sensor data was exported and then cleaned using a custom script. I implemented data augmentation to expand the training dataset by simulating variations in sensor readings.</p>
 
-        <h3>Model Development</h3>
-        <p>Given the time-dependent nature of traffic data, I selected an RNN for its ability to capture temporal dependencies. The model consisted of LSTM layers, which are particularly effective for time-series analysis. I trained the RNN using a dataset of vehicle and pedestrian trajectories, labeled as safe or risky, achieving a classification accuracy of 95%-99%.</p>
+     <h3>Model Development</h3>
+<p>Given the time-dependent nature of traffic data, I chose a Recurrent Neural Network (RNN) for its ability to capture sequential dependencies in time-series data. Unlike traditional neural networks, RNNs retain information from previous time steps, making them ideal for analyzing dynamic data such as vehicle and pedestrian movements. Specifically, I used Long Short-Term Memory (LSTM) layers within the RNN. LSTMs are a type of RNN that can learn long-term dependencies, which is crucial when predicting the behavior of objects over time. By training the RNN on a dataset of vehicle and pedestrian trajectories, labeled as safe or risky, the model achieved a classification accuracy of 95%-99%. This high performance demonstrates the effectiveness of RNNs for time-sensitive tasks in autonomous driving scenarios.</p>
 
         <h3>Scenario Simulation and Evaluation</h3>
         <p>After training, I generated several driving scenarios to test and visualize the model’s performance. By using MATLAB’s visualization tools, I was able to see the classification results in real-time, comparing them to ground truth data. I also created a GUI to facilitate interaction with the various scenarios.</p>
