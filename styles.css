@@ -795,3 +795,64 @@ body.dark-mode .read-more:hover {
 #blog a h2:hover {
     text-decoration: underline; /* Add an underline effect on hover if desired */
 }
+/* Spotlight Section Styling */
+.spotlight-section {
+    background-color: #f7f8fa;
+    padding: 60px 20px;
+    margin-top: 40px;
+}
+
+.spotlight-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.spotlight-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.spotlight-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.spotlight-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.spotlight-highlights {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.spotlight-highlights li {
+    margin-bottom: 10px;
+}
+
+.spotlight-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0078FF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.spotlight-image {
+    flex: 1;
+    text-align: center;
+}
+
+.spotlight-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
