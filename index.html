@@ -4,257 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon link -->
-
-
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
     <title>Jakub Schwenkbeck</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-	 <!-- Include the p5.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
 <body>
     <header>
-	
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-<li><a href="BlogMainPage.html">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-		
-				  <button id="reset-button" style="position: absolute; top: 5px; left: 15px; padding: 8px; background-color: #0078FF; color: white; border: none; border-radius: 4px; cursor: pointer;">Reset Canvas</button>
-
-				
-            </ul>
-			<label class="toggle-container">
-    <input type="checkbox" id="dark-mode-toggle">
-    <span class="toggle-switch"></span>
-    <span class="toggle-label">Dark Mode</span>
-</label>
-
-        </nav>
-        <div class="hero" id="interactive-hero">
-		        <div class="draw-label">Draw!</div> <!-- Added label -->
-
+        
+        <div class="hero">
             <img src="Profile_Picture.jpg" alt="Profile Picture" class="profile-pic">
             <div class="hero-text">
                 <h1>Jakub Schwenkbeck</h1>
-                <p>Computer Science Student, Software Developer</p>
+                <p>Computer Science Student | Software Engineer</p>
             </div>
-			 
         </div>
     </header>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FDD6F9VQ47"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FDD6F9VQ47');
-</script>
-
-	 <!-- p5.js Sketch for Drawing Effect Only in Hero Section -->
-    <script>
-        let hero;
-
-        function setup() {
-            // Select the hero section
-            hero = document.getElementById('interactive-hero');
-            
-            // Create a canvas with the same width and height as the hero
-            let canvas = createCanvas(hero.offsetWidth, hero.offsetHeight);
-            canvas.position(hero.offsetLeft, hero.offsetTop); // Position inside the hero section
-            //canvas.style('z-index', '-1'); // Ensure canvas is behind other hero content
-            canvas.parent(hero); // Attach canvas to hero section
-            
-            background(0, 0, 0, 0); // Transparent background
-        }
-
-        function draw() {
-            // Draw only when mouse is pressed within the hero section
-            if (mouseIsPressed && mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
-				
-				// check to not overdraw content
-				if(mouseX < width/4 || mouseX > 3 * width/4){
-					stroke(255, 204, 0); // Yellow stroke color for visibility
-					strokeWeight(3); // Set line thickness
-					line(mouseX, mouseY, pmouseX, pmouseY); // Draw line based on mouse movement
-				}
-            }
-        }
-
-        // Adjust canvas size when the window or hero section is resized
-        function windowResized() {
-            resizeCanvas(hero.offsetWidth, hero.offsetHeight);
-        }
-		  // Reset button functionality
-        document.getElementById('reset-button').onclick = function() {
-            clear(); // Clear the canvas
-            background(0, 0, 0, 0); // Reset background
-        };
-    </script>
-
     <main>
-        <!-- About Me Section -->
         <section id="about" class="content-section">
-            <h2>About Me</h2>
             <p>
-                Hey, I'm <strong>Jakub</strong> (he/him), currently studying <strong>Computer Science</strong> with a deep interest in technology, mathematics, and science. 
-                I'm passionate about tackling challenging projects in areas such as <strong>Neural Networks</strong>, <strong>Server Development</strong>, 
-                <strong>Web Applications</strong>, <strong>Virtual Machines</strong>, <strong>Physics</strong>, and <strong>Advanced Mathematics</strong>. 
-                My work is driven by curiosity and a desire to learn and build efficient, scalable solutions.
+                I'm a <strong>Computer Science student</strong> passionate about <strong>Compilers, AI, and Software Engineering</strong>.  
+                Currently contributing to <strong>Effekt</strong>, previously a developer at <strong>Marelli</strong>.
             </p>
         </section>
 
-        
-
-<!-- Work Experience Section -->
-<section id="experience" class="content-section">
-    <h2>Work Experience</h2>
-    <div class="experience-item">
-        <a href="https://www.marelli.com/" target="_blank" class="company-link">
-            <img src="marelli_logo.png" alt="Marelli Logo" class="company-logo">
-        </a>
-        <div class="experience-details">
-             <h3>
-                <a href="https://www.marelli.com/" target="_blank" class="marelli-link">Software Developer at Marelli</a>
-            </h3>
-            <p>
-                As a software developer at Marelli, I contributed to the design and development of a large-scale, internationally deployed software solution in the automotive industry. This project involved intricate mathematical modeling and physical simulations for development of high-class automotive vehicles across the globe.
-            </p>
-            <p>
-                My role encompassed creating user-friendly graphical interfaces (GUIs) using MATLAB, implementing algorithms to solve complex problems, and employing object-oriented programming principles. I collaborated with interdisciplinary teams to integrate various technologies, ensuring seamless functionality and delivering high-quality software solutions.
-            </p>
-        </div>
-    </div>
-</section>
-<section id="spotlight" class="content-section spotlight-section">
-    <div class="spotlight-wrapper">
-        <div class="spotlight-info">
-            <h2>Spotlight: Behavior Classification for Autonomous Vehicles</h2>
-            <p>This project uses a Recurrent Neural Network (RNN) to classify object behavior and assess the risk it poses to autonomous vehicles. By leveraging MATLAB and Simulink, it creates a robust model that helps improve the safety of self-driving cars.</p>
-
-            <ul class="spotlight-highlights">
-                <li><strong>Key Focus:</strong> Object behavior classification, risk assessment, autonomous driving.</li>
-                <li><strong>Technology:</strong> MATLAB, Simulink, RNNs (LSTM), Java Integration.</li>
-                <li><strong>Outcome:</strong> Achieved 95%-99% accuracy in classifying risky vs safe behaviors.</li>
-            </ul>
-
-            <a href="https://github.com/JakubSchwenkbeck/Behavior-Classification-For-AV" target="_blank" class="spotlight-link">View Project on GitHub</a>
-		<a href="blogs/AV-Project-blog-post.html"><h3>Blog Post</h3></a>
-
-        </div>
-        
-        <div class="spotlight-image">
-            <img src="VisualData.png" alt="Behavior Classification Visualization" />
-        </div>
-    </div>
-</section>
-
-        <!-- Projects Section -->
-      <section id="projects" class="content-section">
-            <h2>Selected Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Behavior Classification for Autonomous Vehicles</h3>
-                    <p>Recurrent Neural Network (RNN) model for classifying object behaviors and assessing risks for autonomous driving.</p>
-                    <a href="https://github.com/JakubSchwenkbeck/Behavior-Classification-For-AV" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Transformer</h3>
-                    <p>Rust implementation of the Transformer architecture, serving as a foundation for large language models (LLMs).</p>
-                    <a href="https://github.com/JakubSchwenkbeck/Transformer" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>AhoCorasick-Scala</h3>
-                    <p>Scala implementation of the Aho-Corasick algorithm with concurrent processing and GUI visualization.</p>
-                    <a href="https://github.com/JakubSchwenkbeck/AhoCorasick-Scala" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Quantum Computer Simulation</h3>
-                    <p>Rust-based quantum simulator allowing users to manipulate qubits and visualize computations.</p>
-                    <a href="https://github.com/JakubSchwenkbeck/Quantum-Computer-Simulation" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Java Compiler</h3>
-                    <p>A Java-based compiler that translates high-level code into optimized bytecode.</p>
-                    <a href="https://github.com/JakubSchwenkbeck/Java-Compiler" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Effekt Contribution</h3>
-                    <p>Contributor to the Effekt programming language, focusing on functional programming and compiler optimizations.</p>
-                    <a href="https://github.com/effekt-lang" target="_blank">View Effekt Project</a>
-                </div>
+        <section id="projects" class="content-section">
+            <div class="link-boxes">
+                <a href="https://github.com/JakubSchwenkbeck" class="link-box">See my GitHub</a>
+                <a href="https://effekt-lang.org/" class="link-box">Currently working on Effekt</a>
+                <a href="https://www.marelli.com/" class="link-box">Previously dev at Marelli</a>
             </div>
         </section>
-       <!-- Container for the GitHub Stats -->
-<div class="github-stats-container">
-    <img 
-        src="https://github-readme-stats.vercel.app/api/top-langs/?username=JakubSchwenkbeck&hide=html,python,haskellcss,scss&layout=compact&theme=radical&langs_count=6" 
-        alt="Top Languages"
-        class="github-stats"
-    />
-</div>
 
-    </div>
-
-		<!-- Blog Section (work in progress) -->
-</section>
-
-<section id="blog" class="content-section">
-    <a href="BlogMainPage.html"><h2>Blog</h2></a>
-
-    <div class="blog-posts">
-    <div class="blog-post">
-    <h3><a href="blogs/cnn-maths-blog.html">Mathematical Foundations of Convolutional Neural Networks (CNNs)</a></h3>
-    <p>This post dives into the mathematical foundations of key CNN layers: Fully Connected, Convolutional, and Max Pooling, essential for understanding deep learning.</p>
-    <a href="blogs/cnn-maths-blog.html" class="read-more">Read more</a>
-</div>
-        <div class="blog-post">
-            <h3><a href="blogs/blog-post-matlab.html">Why Matlab might be a good choice for your next Project</a></h3>
-            <p>This post explores the pros and cons of using MATLAB as a High Level and High Performance programming language.</p>
-            <a href="blog-post-matlab.html" class="read-more">Read more</a>
-        </div>
-   
-        <!more blog posts here -->
-    </div>
-</section>
-
-
-        <!-- Contact Section -->
-        <section id="contact" class="content-section">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out via:</p>
-            <ul class="contact-list">
-                <li><a href="https://github.com/JakubSchwenkbeck" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/Jakub-Schwenkbeck" target="_blank">LinkedIn</a></li>
-            </ul>
+        <section id="blog" class="content-section">
+            <p><a href="BlogMainPage.html" class="small-blog-link">Check out my blog →</a></p>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Jakub Schwenkbeck. All rights reserved.</p>
-    </footer>
-	<script>
-document.getElementById('dark-mode-toggle').onclick = function() {
-    document.body.classList.toggle('dark-mode');
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled'); // Save preference
-};
-
-// On page load, check for dark mode preference in local storage
-window.onload = function() {
-    const darkMode = localStorage.getItem('darkMode');
-    if (darkMode === 'enabled') {
-        document.body.classList.add('dark-mode');
-        document.getElementById('dark-mode-toggle').checked = true;
-    }
-};
-
-</script>
+    <footer class="footer">
+    <p>Connect with me on <a href="https://linkedin.com/in/Jakub-Schwenkbeck" target="_blank">LinkedIn</a></p>
+</footer>
 
 </body>
 </html>
