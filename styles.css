@@ -1,858 +1,231 @@
-/* Reset some default styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f5f6fa; /* Light background for a clean look */
-    color: #333; /* Dark text for readability */
-    line-height: 1.6;
+    font-family: 'JetBrains Mono', monospace;
     scroll-behavior: smooth;
 }
 
-/* Navigation */
-nav {
-    background-color: #000; /* Dark header bar */
-    padding: 1rem;
+/* Root Variables */
+:root {
+    --background: #0d0d0d;
+    --primary: #131313;
+    --secondary: #1b1b1b;
+    --accent: #66ccff;  /* Hyprland-style neon blue */
+    --text: #cfcfcf;
+    --subtext: #8a8a8a;
+    --border: #292929;
 }
 
-nav ul {
+/* Body */
+body {
+    background: var(--background);
+    color: var(--text);
     display: flex;
-    justify-content: flex-end;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 2rem;
-}
-
-nav ul li a {
-    color: #fff; /* White nav links */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #00aaff; /* Tesla's sleek blue for hover effect */
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #0078FF, #00AAFF); /* Meta & Alphabet blue gradient */
-    color: #fff; /* White text for contrast */
-}
-/* Hero Label Styling */
-.hero .draw-label {
-    position: absolute;
-    top: 100px;
-    left: 10px;
-    background-color: #0078FF;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 14px;
-   /* Ensure it's on top */
-}
-
-
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-right: 2rem;
-    border: 4px solid #fff;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    opacity: 0.8;
-}
-
-/* Content Section Styling */
-.content-section {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.content-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    border-left: 5px solid #0078FF; /* Blue accent for headings */
-    padding-left: 1rem;
-}
-
-/* About Me Section */
-#about p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #666;
-}
-
-/* Projects Section */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-.project-card {
-    background-color: #f1f1f1;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.project-card p {
-    color: #555;
-    margin-bottom: 1rem;
-}
-
-.project-card a {
-    text-decoration: none;
-    color: #00aaff; /* Alphabet’s clean blue for links */
-    font-weight: bold;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Top Languages Section */
-.languages-list ul {
-    list-style: none;
-}
-
-.languages-list li {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-}
-
-.stats-image {
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.stats-image img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* GitHub Stats Container */
-.github-stats-container {
-    text-align: center; /* Center the image horizontally */
-    padding: 20px;
-    margin: 30px auto; /* Space around the container */
-    max-width: 500px; /* Max width for the container */
-    background-color: #2a2a2a; /* Dark background for contrast */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-}
-
-/* GitHub Stats Image */
-.github-stats {
-    width: 100%; /* Make the image responsive */
-    max-width: 450px; /* Set a maximum width */
-    height: auto; /* Keep the aspect ratio */
-    border-radius: 10px; /* Slight rounding for the image corners */
-}
-
-/* Contact Section */
-.contact-list {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.contact-list a {
-    text-decoration: none;
-    color: #00aaff; /* Blue links for consistency */
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.contact-list a:hover {
-    color: #0078FF;
-}
-/* Work Experience Section */
-/* Work Experience Section */
-/* General Content Section Styles */
-.content-section {
-    padding: 40px 20px;
-    background-color: #f9f9f9; /* Light background for contrast */
-    border-radius: 8px; /* Rounded corners for a modern look */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-/* Work Experience Section Styling */
-#experience {
-    background-color: #fff; /* White background for clean look */
-    padding: 40px 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05); /* Light shadow for subtle depth */
-    color: #333; /* Dark text for readability */
-    text-align: left; /* Align text to the left */
-}
-
-/* Work Experience Item Styles */
-.experience-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #f1f1f1; /* Light gray background for card */
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-.experience-item:hover {
-    transform: translateY(-5px); /* Hover effect for floating card */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* Slightly deeper shadow on hover */
-}
-
-.company-link {
-    margin-right: 20px;
-}
-
-
-.company-logo {
-    width: 80px;
-    height: auto;
-    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* Slight shadow under logo */
-}
-
-
-.experience-details {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.experience-details h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.6rem; /* Slightly larger heading for titles */
-    font-weight: bold;
-    color: #333; /* Darker color for titles */
-    text-transform: capitalize; /* Capitalize title for clean presentation */
-}
-
-.experience-details h3 a {
-    text-decoration: none;
-    color: #0078FF; /* Keep the clean blue for links */
-    transition: color 0.3s ease;
-}
-
-.experience-details h3 a:hover {
-    color: #00aaff; /* Slight color change on hover */
-}
-
-.experience-details p {
-    margin: 8px 0; /* Add space between paragraphs */
-    line-height: 1.7;
-    font-size: 1.1rem; /* Increase readability */
-    color: #555; /* Slightly lighter color for description */
-}
-
-.experience-details p:first-of-type {
-    font-weight: bold; /* Highlight the first paragraph for importance */
-    font-size: 1.2rem; /* Make the first paragraph slightly bigger */
-    color: #333; /* Use darker color for more emphasis */
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .experience-item {
-        flex-direction: column;
-        text-align: center; /* Center everything on smaller screens */
-    }
-
-    .company-logo {
-        margin-bottom: 10px; /* Add space between logo and text */
-    }
-}
-
-
-.project-languages {
-    margin-top: 10px; /* Space above the language badges */
-}
-
-.project-languages img {
-    width: 50 px; /* Set width for uniformity */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 5px; /* Space between badges */
-    vertical-align: middle; /* Align badges with text */
-}
-
-
-
-/* Footer */
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 3rem;
-}
-
-footer p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212; /* Main dark background */
-    color: #e0e0e0; /* Light text for readability */
-}
-
-/* Navigation */
-nav.dark-mode {
-    background-color: #1f1f1f; /* Dark grey navigation background */
-}
-
-nav.dark-mode ul li a {
-    color: #e0e0e0; /* Light text for navigation links */
-}
-
-nav.dark-mode ul li a:hover {
-    color: #00aaff; /* Hover color for nav links */
-}
-/* Hero Section */
-body.dark-mode .hero {
-    background: linear-gradient(135deg, #0078FF, #00AAFF); /* Keep the gradient */
-}
-
-body.dark-mode .hero h1,
-body.dark-mode .hero p {
-    color: #e0e0e0; /* Light text for hero section */
-}/* Content Section Styling */
-body.dark-mode .content-section {
-    background-color: #2a2a2a; /* Dark grey background for sections */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
-}
-
-body.dark-mode .content-section h2 {
-    color: #e0e0e0; /* Light heading text */
-    border-left: 5px solid #00aaff; /* Blue accent for headings in dark mode */
-}
-
-/* About Section */
-body.dark-mode #about p {
-    color: #bbbbbb; /* Light grey text for about section */
-}
-
-/* Work Experience Section Styling for Dark Mode */
-body.dark-mode #experience {
-    background-color: #2a2a2a; /* Dark grey background for dark mode */
-    padding: 40px 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Darker shadow for subtle depth */
-    color: #e0e0e0; /* Light text for readability */
-    text-align: left;
-}
-
-body.dark-mode #experience h3 {
-    color: #e0e0e0; /* Light color for headings in work experience */
-}
-
-body.dark-mode #experience p {
-    color: #bbbbbb; /* Light grey paragraph text in work experience */
-}
-
-body.dark-mode #experience a {
-    color: #00aaff; /* Blue links for dark mode */
-}
-
-body.dark-mode #experience a:hover {
-    color: #00ccff; /* Lighter hover color for links */
-}
-
-/* Projects Section */
-body.dark-mode .project-card {
-    background-color: #3a3a3a; /* Slightly lighter grey for project cards */
-    border-radius: 10px;
-    color: #e0e0e0; /* Light text for project details */
-}
-
-body.dark-mode .project-card:hover {
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2); /* Light hover shadow */
-}
-
-body.dark-mode .project-card a {
-    color: #00aaff; /* Blue links for dark mode */
-}
-body.dark-mode .project-card p {
-    color: #cccccc; /* Light grey text for paragraph content */
-}
-
-
-/* Work Experience Section */
-body.dark-mode .experience-item {
-    background-color: #3a3a3a; /* Slightly lighter grey for experience cards */
-    color: #e0e0e0; /* Light text */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Dark shadow for depth */
-}
-
-body.dark-mode .experience-item:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker hover shadow */
-}
-
-body.dark-mode .experience-details h3 {
-    color: #e0e0e0; /* Light heading text for work experience */
-}
-
-body.dark-mode .experience-details p {
-    color: #bbbbbb; /* Light grey paragraph text */
-}
-
-body.dark-mode .experience-details h3 a {
-    color: #00aaff; /* Blue links for headings in work experience */
-}
-
-body.dark-mode .experience-details h3 a:hover {
-    color: #00ccff; /* Lighter hover color for links */
-}
-
-/* Footer */
-body.dark-mode footer {
-    background-color: #1f1f1f; /* Dark grey footer background */
-    color: #e0e0e0; /* Light footer text */
-}
-
-/* Toggle Label */
-body.dark-mode .toggle-label {
-    color: #e0e0e0; /* Light color for toggle label */
-}
-
-
-
-
-.toggle-container {
-    display: flex;
     align-items: center;
-    cursor: pointer;
-}
-
-.toggle-container input {
-    display: none; /* Hide the checkbox */
-}
-
-.toggle-switch {
-    width: 50px;
-    height: 24px;
-    background-color: #ccc;
-    border-radius: 50px;
-    position: relative;
-    transition: background-color 0.3s;
-}
-
-.toggle-switch::before {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.3s;
-}
-
-input:checked + .toggle-switch {
-    background-color: #007396; /* Change background color when checked */
-}
-
-input:checked + .toggle-switch::before {
-    transform: translateX(26px); /* Move the toggle knob to the right */
-}
-
-.toggle-label {
-    margin-left: 10px;
-    font-size: 16px;
-    color: #333; /* Light text color */
-}
-/* Blog Section */
-#blog {
-    padding: 50px;
-    background-color: #f9f9f9;
-}
-
-.blog-posts {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.blog-post {
-    background-color: white;
+    height: 100vh;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents unwanted scrolling */
+    animation: fadeIn 0.7s ease-in-out;
 }
 
-.blog-post h3 a {
-    color: #0078FF;
-    text-decoration: none;
-}
-
-.blog-post h3 a:hover {
-    text-decoration: underline;
-}
-
-.read-more {
-    color: #0078FF;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
-/* Dark Mode Styling for Blog Section */
-body.dark-mode #blog {
-    background-color: #2a2a2a; /* Dark grey background for dark mode */
-    padding: 50px; /* Same padding for consistency */
-}
-
-body.dark-mode .blog-post {
-    background-color: #3c3c3c; /* Dark background for blog posts */
-    color: #e0e0e0; /* Light text for readability */
-}
-
-body.dark-mode .blog-post h3 a {
-    color: #00aaff; /* Blue links for dark mode */
-}
-
-body.dark-mode .blog-post h3 a:hover {
-    color: #00ccff; /* Lighter hover color for links */
-}
-
-body.dark-mode .read-more {
-    color: #00aaff; /* Blue read more link for dark mode */
-}
-
-body.dark-mode .read-more:hover {
-    color: #00ccff; /* Lighter hover color for read more links */
-}
-
-/* Blog Post Content Styling */
-.blog-post-content {
-    max-width: 800px; /* Limiting width for better readability */
-    margin: 0 auto; /* Centering the content */
-    padding: 20px; /* Inner padding */
-    background-color: #fff; /* White background for posts */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
-
-.blog-post-content h1 {
-    font-size: 2.5em; /* Size for main title */
-    color: #0078FF; /* Tesla blue for main title */
-    margin-bottom: 15px; /* Space below the main title */
-}
-
-.blog-post-content h2 {
-    font-size: 2em; /* Size for subheadings */
-    color: #0078FF; /* Tesla blue for subheadings */
-    margin-top: 20px; /* Space above subheadings */
-    margin-bottom: 10px; /* Space below subheadings */
-}
-
-.blog-post-content h3 {
-    font-size: 1.75em; /* Size for third-level headings */
-    color: #333; /* Dark gray for headings */
-    margin-top: 15px; /* Space above third-level headings */
-    margin-bottom: 10px; /* Space below third-level headings */
-}
-
-.blog-post-content p {
-    line-height: 1.6; /* Improved line height for readability */
-    margin-bottom: 15px; /* Space below paragraphs */
-}
-
-.blog-post-content ul {
-    margin-left: 20px; /* Indentation for lists */
-    margin-bottom: 15px; /* Space below lists */
-}
-
-.blog-post-content ul li {
-    margin-bottom: 10px; /* Space below list items */
-}
-
-/* Dark Mode Styling for Blog Post Content */
-body.dark-mode .blog-post-content {
-    background-color: #3c3c3c; /* Dark background for posts */
-    color: #e0e0e0; /* Light text for readability */
-}
-
-body.dark-mode .blog-post-content h1,
-body.dark-mode .blog-post-content h2,
-body.dark-mode .blog-post-content h3 {
-    color: #00aaff; /* Blue for headings in dark mode */
-}
-
-body.dark-mode .blog-post-content p,
-body.dark-mode .blog-post-content ul li {
-    color: #e0e0e0; /* Light text for paragraphs and list items */
-}
-
-
-/* Blog Section Enhancements */
-#blog {
-    padding: 50px;
-    background-color: #f9f9f9;
-    max-width: 1200px;
-    margin: 0 auto; /* Center the blog section */
-}
-
-/* Blog Posts Container */
-.blog-posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 30px; /* Increased gap between posts for better spacing */
-}
-
-/* Blog Post Card */
-.blog-post {
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.blog-post:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-
-/* Blog Post Title */
-.blog-post h3 a {
-    font-size: 1.75rem;
-    color: #0078FF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.blog-post h3 a:hover {
-    color: #00AAFF;
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Blog Post Date */
-.blog-post .post-date {
-    font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 15px;
-}
-
-/* Blog Post Description */
-.blog-post p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/* Read More Link */
-.read-more {
-    align-self: flex-end; /* Align to the right */
-    color: #0078FF;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.read-more:hover {
-    color: #00AAFF;
-    text-decoration: underline;
-}
-
-/* Dark Mode Styling for Blog Section */
-body.dark-mode #blog {
-    background-color: #2a2a2a; /* Dark background for dark mode */
-    padding: 50px;
-}
-
-body.dark-mode .blog-post {
-    background-color: #3a3a3a;
-    color: #e0e0e0;
-}
-
-body.dark-mode .blog-post h3 a {
-    color: #00aaff;
-}
-
-body.dark-mode .blog-post h3 a:hover {
-    color: #00ccff;
-}
-body.dark-mode .blog-pst p3 {
-    color: #555;
-}
-body.dark-mode .read-more {
-    color: #00aaff;
-}
-
-body.dark-mode .read-more:hover {
-    color: #00ccff;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .blog-posts {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Featured Blog Post */
-.featured-blog-post {
-    grid-column: span 2; /* Span across two columns on larger screens */
-    background: linear-gradient(135deg, #0078FF, #00AAFF); /* Gradient background for emphasis */
-    color: #fff;
-    padding: 40px;
+/* Container */
+.container {
+    background: var(--primary);
+    padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for featured post */
+    border: 1px solid var(--border);
+    box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
+    width: 420px;
+    text-align: center;
+    animation: popIn 0.5s ease-in-out;
 }
 
-.featured-blog-post:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced hover effect */
+/* Pop In Animation */
+@keyframes popIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
-.featured-blog-post h3 a {
-    color: #fff;
-}
-
-.featured-blog-post .post-date {
-    color: #e0e0e0;
-}
-
-/* Blog Post Category Label */
-.blog-post-category {
-    background-color: #0078FF;
-    color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: bold;
+/* Header */
+h1 {
+    color: var(--text);
+    font-size: 22px;
     margin-bottom: 10px;
-    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.featured-blog-post .blog-post-category {
-    background-color: white;
-    color: #0078FF; /* Inverted colors for featured post */
-}
-
-/* Blog Post Image */
-.blog-post img {
+/* Input Field */
+input[type="text"] {
     width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
     border-radius: 8px;
-    margin-bottom: 20px;
-    object-fit: cover;
-    max-height: 180px; /* Limit the height */
+    background: var(--secondary);
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s ease-in-out;
 }
 
-
-#blog a h2 {
-    text-decoration: none;
-    color: inherit;
+input[type="text"]:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 8px rgba(102, 204, 255, 0.3);
 }
 
-#blog a h2:hover {
-    text-decoration: underline; /* Add an underline effect on hover if desired */
-}
-/* Spotlight Section Styling */
-.spotlight-section {
-    background-color: #f7f8fa;
-    padding: 60px 20px;
-    margin-top: 40px;
+input[type="text"]::placeholder {
+    color: var(--subtext);
 }
 
-.spotlight-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s ease-in-out, box-shadow 0.2s, transform 0.1s ease-in-out;
+    margin-top: 14px;
 }
 
-.spotlight-info {
-    flex: 1;
-    margin-right: 20px;
+button:hover {
+    background: #88ddff;
+    box-shadow: 0 0 10px rgba(102, 204, 255, 0.5);
+    transform: scale(1.05);
 }
 
-.spotlight-info h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+button:active {
+    transform: scale(0.95);
 }
 
-.spotlight-info p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+/* Image (Shrunk and Styled) */
+img {
+    max-width: 200px; /* Smaller size */
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
 }
 
-.spotlight-highlights {
-    list-style: none;
-    padding-left: 0;
-    font-size: 1rem;
-    margin-bottom: 20px;
+img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
-.spotlight-highlights li {
-    margin-bottom: 10px;
-}
-
-.spotlight-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0078FF;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-.spotlight-image {
-    flex: 1;
+/* Footer */
+.footer {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--subtext);
     text-align: center;
 }
-
-.spotlight-image img {
-    max-width: 100%;
-    border-radius: 8px;
+/* Link Boxes */
+.link-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
 }
 
+.link-box {
+    width: 100%;
+    max-width: 300px;
+    background: var(--secondary);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 8px rgba(102, 204, 255, 0.2);
+}
+
+.link-box:hover {
+    background: var(--primary);
+    border-color: var(--accent);
+    box-shadow: 0 0 12px rgba(102, 204, 255, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Small Blog Link */
+.small-blog-link {
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.small-blog-link:hover {
+    color: #88ddff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #88ddff;
+}
+/* Footer */
+.footer {
+    margin-top: 30px;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--subtext);
+    border-top: 1px solid var(--border);
+}
+
+.footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #88ddff;
+    text-shadow: 0 0 5px rgba(102, 204, 255, 0.7);
+}
