@@ -29,6 +29,7 @@ body {
     padding: 20px;
     overflow: hidden; /* Prevents unwanted scrolling */
     animation: fadeIn 0.7s ease-in-out;
+    flex-direction: row; /* Default horizontal layout */
 }
 
 /* Fade In Animation */
@@ -144,10 +145,11 @@ img:hover {
     color: var(--subtext);
     text-align: center;
 }
+
 /* Link Boxes */
 .link-boxes {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Default horizontal layout */
     gap: 15px;
     align-items: center;
     margin-top: 20px;
@@ -208,27 +210,7 @@ img:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: #88ddff;
 }
-/* Footer */
-.footer {
-    margin-top: 30px;
-    padding: 15px 0;
-    text-align: center;
-    font-size: 14px;
-    color: var(--subtext);
-    border-top: 1px solid var(--border);
-}
 
-.footer a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-.footer a:hover {
-    color: #88ddff;
-    text-shadow: 0 0 5px rgba(102, 204, 255, 0.7);
-}
 /* Links Container */
 .links-container {
     display: flex;
@@ -271,4 +253,29 @@ img:hover {
 .link-box p {
     margin: 0;
     font-weight: bold;
+}
+
+/* Mobile Layout (For screens smaller than 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        overflow: auto; /* Enable scroll */
+        flex-direction: column; /* Make the layout vertical */
+    }
+
+    .container {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .link-boxes {
+        flex-direction: column; /* Make link boxes stack vertically on mobile */
+    }
+
+    .footer {
+        margin-top: 20px;
+        padding: 15px 0;
+        text-align: center;
+        font-size: 14px;
+    }
 }
