@@ -29,17 +29,51 @@
         <div class="hero">
             <img src="Profile_Picture.jpg" alt="Profile Picture" class="profile-pic">
             <div class="hero-text">
-                <h1 class="typing-effect">@Jakub Schwenkbeck_</h1>
+                <h1 class="typing-effect">@Jakub Schwenkbeck</h1>
+
                 <p>Computer Science Student | Software Engineer</p>
+                <br>
+                <p><span role="img" aria-label="location">📍</span> Tübingen, Germany</p>
+               
+                <p id="current-time"></p>
+                <script>
+                    function updateTime() {
+                        const timeElement = document.getElementById('current-time');
+                        const now = new Date();
+                        const hours = now.getHours().toString().padStart(2, '0');
+                        const minutes = now.getMinutes().toString().padStart(2, '0');
+                        const seconds = now.getSeconds().toString().padStart(2, '0');
+                        
+                        timeElement.textContent = `Current time: ${hours}:${minutes}:${seconds}`;
+                    }
+                
+                    setInterval(updateTime, 1000); // Update the time every second
+                    updateTime(); // Initial call to display the time immediately
+                </script>
+                
             </div>
+            
         </div>
     </header>
 
     <main>
+
+        <section class="terminal-box">
+            echo "Welcome to my workspace. I build software, explore AI, and work on compilers."
+        </section>
+        
         <section id="about" class="content-section">
             <p>
-                I'm a <strong>Computer Science student</strong> passionate about <strong>Compilers, AI, and Software Engineering</strong>.  
-                Currently contributing to <strong>Effekt</strong>, previously a developer at <strong>Marelli</strong>.
+                I'm a <strong>Computer Science student</strong> and <strong> Software Engineer </strong> <strong>building professional software, AI, compilers and more</strong>!
+               
+            </p>
+    
+            <p>
+                Currently working on <a href="https://effekt-lang.org" target="_blank">Effekt Lang</a>and its <a href="https://github.com/effekt-lang/effekt-vscode" target="_blank">VSCode extension</a>.
+            </p>
+        
+            <p>
+                Previously, I was a Working Student at <a href="https://www.marelli.com" target="_blank">Marelli</a>, where I developed and maintained a large-scale, internationally deployed software solution in the automotive industry.  
             </p>
         </section>
 
@@ -52,13 +86,20 @@
 
     <a href="https://effekt-lang.org" target="_blank" class="link-box">
         <img src="icon.png" alt="Effekt Logo">
-        <p>Currently working on Effekt</p>
+        <p>Part of the Effekt Research Group</p>
+    </a>
+
+    <a href="https://github.com/effekt-lang/effekt-vscode" target="_blank" class="link-box">
+        <img src="vscode.png" alt="VSCode Logo">
+        <p>Currently working on the VSCode extension</p>
     </a>
 
     <a href="https://www.marelli.com" target="_blank" class="link-box">
         <img src="marelli-black.png" alt="Marelli Logo">
         <p>Previously Developer at Marelli</p>
     </a>
+
+  
 </div>
 
         </section>
@@ -73,7 +114,7 @@
     </footer>
 
     <footer class="footer">
-        <p><span>█</span> Built with <span>⌨️</span> and <span>☕</span> in a terminal.</p>
+        <p><span>█</span> Built with <span>⌨️</span>, <span>🖱️</span> and <span>☕</span> in VSCode.</p>
     </footer>
     
 

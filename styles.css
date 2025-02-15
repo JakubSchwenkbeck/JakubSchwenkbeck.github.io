@@ -387,8 +387,65 @@ img:hover {
     font-size: 12px;
     color: var(--subtext);
     position: absolute;
-    top: 10%;
+    top: 7%;
     left: 50%;
     transform: translateX(-50%);
     animation: floatText 3s infinite ease-in-out;
 }
+.terminal-box {
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    color: var(--text);
+    box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
+}
+.terminal-box::before {
+    content: "guest@website:~$";
+    color: var(--accent);
+    font-weight: bold;
+    margin-right: 5px;
+}
+/* Link Styles */
+a {
+    color: var(--accent); /* Default link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Prevent visited links from turning purple */
+a:visited {
+    color: var(--accent); /* Keep accent color after clicking */
+}
+
+/* Hover effect */
+a:hover {
+    color: #88ddff; /* Lighten color on hover */
+}
+
+/* About Section */
+#about p {
+    margin-bottom: 20px; /* Space between paragraphs */
+    line-height: 1.8; /* Increased line-height for better readability */
+}
+
+/* Add line breaks for text spacing */
+#about p br {
+    margin-bottom: 10px; /* Add space after line breaks */
+}
+
+/* Add spacing for links in the about section */
+#about a {
+    color: var(--accent);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#about a:hover {
+    color: #88ddff; /* Lighten on hover */
+}
+
