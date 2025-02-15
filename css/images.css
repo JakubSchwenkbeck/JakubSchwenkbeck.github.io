@@ -1,0 +1,13 @@
+/* images.css */
+/* Image (Shrunk and Styled) */
+img {
+    max-width: 200px; /* Smaller size */
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}

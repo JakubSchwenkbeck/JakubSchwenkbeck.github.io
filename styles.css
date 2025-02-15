@@ -77,28 +77,6 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* Input Field */
-input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--secondary);
-    color: var(--text);
-    font-size: 14px;
-    outline: none;
-    transition: border 0.2s ease-in-out;
-}
-
-input[type="text"]:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 8px rgba(102, 204, 255, 0.3);
-}
-
-input[type="text"]::placeholder {
-    color: var(--subtext);
-}
-
 /* Button */
 button {
     width: 100%;

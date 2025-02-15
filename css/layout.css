@@ -1,0 +1,21 @@
+/* layout.css */
+/* Container */
+.container {
+    background: var(--primary);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
+    width: 420px;
+    text-align: center;
+    animation: popIn 0.5s ease-in-out;
+}
+
+/* Header */
+h1 {
+    color: var(--text);
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

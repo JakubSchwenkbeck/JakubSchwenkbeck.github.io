@@ -1,0 +1,147 @@
+/* components.css */
+/* Sidebar */
+.sidebar {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--subtext);
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--primary);
+    padding: 5px 0;
+    text-align: center;
+    font-size: 12px;
+    color: var(--subtext);
+    border-top: 1px solid var(--border);
+}
+
+.footer span {
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+
+.content-section {
+    padding: 20px;
+    margin: 20px 0;
+    background: var(--primary);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.content-section:hover {
+    box-shadow: 0 0 15px rgba(102, 204, 255, 0.3);
+}
+
+/* Link Boxes */
+.link-boxes {
+    display: flex;
+    flex-direction: row; /* Default horizontal layout */
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.link-box {
+    width: 100%;
+    max-width: 300px;
+    background: var(--secondary);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 8px rgba(102, 204, 255, 0.2);
+}
+
+.link-box:hover {
+    background: var(--primary);
+    border-color: var(--accent);
+    box-shadow: 0 0 12px rgba(102, 204, 255, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Small Blog Link */
+.small-blog-link {
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.small-blog-link:hover {
+    color: #88ddff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #88ddff;
+}
+
+/* Links Container */
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual Link Box */
+.link-box {
+    background: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px;
+    width: 130px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+    box-shadow: 0 0 8px rgba(102, 204, 255, 0.1);
+}
+
+.link-box img {
+    max-width: 50px; /* Adjust image size */
+    margin-bottom: 8px;
+    filter: brightness(0.9); /* Slight dim effect */
+    transition: filter 0.2s ease-in-out;
+}
+
+.link-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(102, 204, 255, 0.3);
+}
+
+.link-box:hover img {
+    filter: brightness(1);
+}
+
+.link-box p {
+    margin: 0;
+    font-weight: bold;
+}

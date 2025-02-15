@@ -1,0 +1,29 @@
+/* responsive.css */
+/* Mobile Layout (For screens smaller than 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        overflow: auto; /* Enable scroll */
+        flex-direction: column; /* Stack sections vertically */
+        height: auto; /* Remove fixed height to allow scrolling */
+    }
+
+    .container {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .link-boxes {
+        flex-direction: row; /* Keep the boxes horizontally aligned */
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* Footer stays at the bottom */
+    .footer {
+        margin-top: auto; /* Push footer to the bottom */
+        padding: 15px 0;
+        text-align: center;
+        font-size: 14px;
+    }
+}

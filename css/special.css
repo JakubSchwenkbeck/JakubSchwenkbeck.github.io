@@ -1,0 +1,43 @@
+/* special.css */
+/* Typing Effect */
+.typing-effect {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--accent);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--accent);
+    width: 100%;
+    display: inline-block;
+    animation: typing 3s steps(20, end) infinite alternate;
+}
+
+/* Terminal Box */
+.terminal-box {
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    color: var(--text);
+    box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
+}
+
+.terminal-box::before {
+    content: "guest@website:~$";
+    color: var(--accent);
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Floating Text */
+.floating-text {
+    font-size: 12px;
+    color: var(--subtext);
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: floatText 3s infinite ease-in-out;
+}

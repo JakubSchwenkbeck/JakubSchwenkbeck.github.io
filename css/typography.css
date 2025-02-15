@@ -1,0 +1,39 @@
+/* typography.css */
+/* Link Styles */
+a {
+    color: var(--accent); /* Default link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: var(--accent);
+}
+
+a:hover {
+    color: #88ddff;
+}
+
+/* About Section */
+#about p {
+    margin-bottom: 20px; /* Space between paragraphs */
+    line-height: 1.8; /* Increased line-height for better readability */
+}
+
+/* Add line breaks for text spacing */
+#about p br {
+    margin-bottom: 10px; /* Add space after line breaks */
+}
+
+/* Spacing for links in the about section */
+#about a {
+    color: var(--accent);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#about a:hover {
+    color: #88ddff;
+}

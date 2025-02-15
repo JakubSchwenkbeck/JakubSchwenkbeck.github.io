@@ -1,0 +1,11 @@
+/* theme.css */
+/* Light Mode */
+.light-mode {
+    --background: #ffffff;
+    --primary: #f0f0f0;
+    --secondary: #e0e0e0;
+    --accent: #0077ff;
+    --text: #222;
+    --subtext: #555;
+    --border: #ccc;
+}

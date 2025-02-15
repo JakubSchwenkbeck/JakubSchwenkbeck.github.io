@@ -1,0 +1,34 @@
+/* global.css */
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+    scroll-behavior: smooth;
+}
+
+/* Root Variables */
+:root {
+    --background: #0d0d0d;
+    --primary: #131313;
+    --secondary: #1b1b1b;
+    --accent: #66ccff;  /* Hyprland-style neon blue */
+    --text: #cfcfcf;
+    --subtext: #8a8a8a;
+    --border: #292929;
+}
+
+/* Body */
+body {
+    background: var(--background);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden; /* Prevents unwanted scrolling */
+    animation: fadeIn 0.7s ease-in-out;
+    flex-direction: row; /* Default horizontal layout */
+}
