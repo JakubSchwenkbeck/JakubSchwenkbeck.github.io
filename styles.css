@@ -137,14 +137,33 @@ img:hover {
     transform: scale(1.05);
     opacity: 0.9;
 }
-
-/* Footer */
-.footer {
+.sidebar {
     margin-top: 10px;
     font-size: 12px;
     color: var(--subtext);
     text-align: center;
 }
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--primary);
+    padding: 5px 0;
+    text-align: center;
+    font-size: 12px;
+    color: var(--subtext);
+    border-top: 1px solid var(--border);
+}
+.footer span {
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 0.3;
+    }
+}
+
 
 /* Link Boxes */
 .link-boxes {
@@ -345,4 +364,31 @@ img:hover {
 
 #theme-toggle:active {
     transform: scale(0.95);
+}
+
+.content-section {
+    padding: 20px;
+    margin: 20px 0;
+    background: var(--primary);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.content-section:hover {
+    box-shadow: 0 0 15px rgba(102, 204, 255, 0.3);
+}
+@keyframes floatText {
+    0% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-10px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.5; }
+}
+
+.floating-text {
+    font-size: 12px;
+    color: var(--subtext);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: floatText 3s infinite ease-in-out;
 }
