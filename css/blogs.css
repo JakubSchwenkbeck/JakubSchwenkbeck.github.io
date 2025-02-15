@@ -1,0 +1,226 @@
+/* blog.css */
+
+/* --- Blog Navigation (reused from main styles) --- */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  header nav ul li a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  header nav ul li a:hover,
+  header nav ul li a.active {
+    color: #88ddff;
+  }
+  
+  /* --- Page Title --- */
+  .page-title {
+    text-align: center;
+    font-size: 28px;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  
+  /* --- Blog Main Page Styles --- */
+  
+  /* Blog Search Section */
+  #blog-search {
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  .search-bar {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--secondary);
+    color: var(--text);
+    font-size: 16px;
+  }
+  
+  /* Featured Post Section */
+  #featured-post {
+    max-width: 800px;
+    margin: 30px auto;
+    background: var(--primary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
+  }
+  
+  #featured-post h2 {
+    color: var(--accent);
+    margin-bottom: 15px;
+  }
+  
+  .blog-post.featured h3 a {
+    font-size: 22px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  .blog-post.featured p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .read-more:hover {
+    color: #88ddff;
+  }
+  
+  /* Recent Posts Section */
+  #recent-posts {
+    max-width: 1000px;
+    margin: 40px auto;
+  }
+  
+  #recent-posts h2 {
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .blog-post {
+    background: var(--primary);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(102, 204, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+  }
+  
+  .blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 12px rgba(102, 204, 255, 0.4);
+  }
+  
+  .blog-post h3 a {
+    font-size: 20px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  .blog-post p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  
+  /* Categories & Tags Section */
+  #categories-tags {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  #categories-tags h2 {
+    color: var(--accent);
+    margin-bottom: 15px;
+  }
+  
+  .categories-list,
+  .tags-list {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .categories-list li a,
+  .tags-list li a {
+    background: var(--secondary);
+    color: var(--accent);
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .categories-list li a:hover,
+  .tags-list li a:hover {
+    background: var(--accent);
+    color: #000;
+  }
+  
+  /* Pagination */
+  #pagination {
+    text-align: center;
+    margin: 30px auto;
+  }
+  
+  #pagination a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  #pagination a:hover {
+    color: #88ddff;
+  }
+  
+  /* --- Individual Blog Post Page Styles --- */
+  .blog-post-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--primary);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
+  }
+  
+  .blog-post-content h1 {
+    color: var(--accent);
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-post-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .blog-post-content h2 {
+    color: var(--accent);
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .blog-post-content ul {
+    margin-left: 20px;
+    list-style: disc;
+  }
+  
+  .blog-post-content li {
+    margin-bottom: 10px;
+  }
+  
