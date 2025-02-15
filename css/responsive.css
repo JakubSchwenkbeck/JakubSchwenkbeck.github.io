@@ -1,29 +1,56 @@
 /* responsive.css */
 /* Mobile Layout (For screens smaller than 768px) */
 @media (max-width: 768px) {
+    /* Ensure the body scrolls vertically and stacks its children */
     body {
-        padding: 10px;
-        overflow: auto; /* Enable scroll */
-        flex-direction: column; /* Stack sections vertically */
-        height: auto; /* Remove fixed height to allow scrolling */
+      padding: 10px;
+      overflow-x: hidden; /* Disable horizontal scroll */
+      overflow-y: auto;   /* Enable vertical scroll */
+      flex-direction: column;
+      height: auto;       /* Allow height to grow */
     }
-
+  
+    /* Make header, main, and footer full width */
+    header, main, footer {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    /* Center and resize containers */
     .container {
-        width: 100%;
-        max-width: 420px;
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
     }
-
-    .link-boxes {
-        flex-direction: row; /* Keep the boxes horizontally aligned */
-        gap: 15px;
-        align-items: center;
+  
+    /* Stack link boxes vertically and center them */
+    .link-boxes,
+    .links-container {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
     }
-
-    /* Footer stays at the bottom */
+  
+    /* Stack navigation links vertically for better mobile experience */
+    header nav ul {
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
+    }
+    
+    header nav ul li {
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Increase spacing in the footer */
     .footer {
-        margin-top: auto; /* Push footer to the bottom */
-        padding: 15px 0;
-        text-align: center;
-        font-size: 14px;
+      margin-top: 20px;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 14px;
     }
-}
+  }
+  
