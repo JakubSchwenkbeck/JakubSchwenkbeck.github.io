@@ -283,3 +283,66 @@ img:hover {
         font-size: 14px;
     }
 }
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typing-effect {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--accent);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--accent);
+    width: 100%;
+    display: inline-block;
+    animation: typing 3s steps(20, end) infinite alternate;
+}
+
+
+.light-mode {
+    --background: #ffffff;
+    --primary: #f0f0f0;
+    --secondary: #e0e0e0;
+    --accent: #0077ff;
+    --text: #222;
+    --subtext: #555;
+    --border: #ccc;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: var(--secondary);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
+
+    /* Fix the width issue */
+    width: auto;   /* Ensures it only takes up the space needed */
+    height: auto;  /* Keeps it compact */
+    display: inline-flex;  /* Centers icon/text better */
+    align-items: center;
+    justify-content: center;
+}
+
+#theme-toggle:hover {
+    background: var(--accent);
+    color: #000;
+    transform: scale(1.05);
+}
+
+#theme-toggle:active {
+    transform: scale(0.95);
+}
