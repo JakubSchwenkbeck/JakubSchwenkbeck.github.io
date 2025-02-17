@@ -1,0 +1,60 @@
+/* General Styles for GitHub Stats Page */
+
+/* Intro text style */
+.intro {
+  text-align: center;
+  font-size: 20px; /* Increased font size for better readability */
+  margin-bottom: 40px; /* Increased bottom margin for spacing */
+  color: var(--text);
+}
+
+/* Container for GitHub widgets */
+.github-widgets {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Increased gap between widgets */
+  flex-wrap: wrap;
+  margin-top: 40px; /* Increased space between intro and widgets */
+}
+
+/* Each widget card */
+.github-card {
+  background: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 15px; /* Slightly rounded corners */
+  padding: 20px; /* Increased padding */
+  box-shadow: 0 0 20px rgba(102, 204, 255, 0.3); /* Stronger shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 350px;  /* Increased width */
+  margin-bottom: 30px; /* Added margin bottom for better spacing */
+}
+
+/* Hover effect for widgets */
+.github-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(102, 204, 255, 0.5);
+}
+
+/* Image styling within the widget cards */
+.github-card img {
+  width: 100%;  /* Take full width of the container */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Adjusting Trophies Card to be bigger */
+.github-card.trophies {
+  width: 100%;
+  max-width: 700px; /* Increased max-width for bigger trophies */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Ensure trophies image fits well */
+.github-card.trophies img {
+  width: 100%;
+  height: auto;
+  max-width: 700px; /* Set a bigger max-width for the image */
+}
