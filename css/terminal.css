@@ -7,7 +7,7 @@
     border: 1px solid var(--border);
     font-family: "JetBrains Mono", monospace;
     font-size: 14px;
-    color: var(--text);
+    color: var(--accent);
     box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
     width: 100%;
     height: auto; /* Adapts to content */
@@ -55,7 +55,7 @@
     flex: 1;
     background: transparent;
     border: none;
-    color: #00ff00;
+    color: var(--accent);
     font-size: 16px;
     outline: none;
 }
@@ -64,6 +64,7 @@
 #terminal-output p {
     margin: 5px 0;
 }
+
 
 /* Close button: positioned at top-right of the active terminal */
 .close-terminal {
