@@ -1,38 +1,81 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const terminalOutput = document.getElementById("terminal-output");
+    const terminalBox = document.getElementById("terminal-box");
     const terminalInput = document.getElementById("terminal-input");
-
-    terminalInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            let command = terminalInput.value.trim();
-            terminalInput.value = ""; 
-
-            let response = processCommand(command);
-
-            terminalOutput.innerHTML += `<p>$ ${command}</p>`;
-            if (response) {
-                terminalOutput.innerHTML += `<p>${response}</p>`;
-            }
-            
-            terminalOutput.scrollTop = terminalOutput.scrollHeight;
-        }
+    const closeTerminal = document.getElementById("close-terminal");
+    const terminalOutput = document.getElementById("terminal-output");
+  
+  
+    // When the input is focused, bring the terminal to the foreground.
+    terminalInput.addEventListener("focus", function () {
+      terminalBox.classList.add("active");
     });
+    
+   // Click anywhere in the terminal box to activate
+   terminalBox.addEventListener("click", function () {terminalBox.classList.add("active");});
+   
+    // Exit terminal when the close button is clicked.
+    closeTerminal.addEventListener("click", function () {
+        exitTerminal();
+      });
+      
+        // terminal should be hidden by default
+    terminalBox.classList.add("remove");
 
-    function processCommand(command) {
-        switch (command.toLowerCase()) {
-            case "whoami":
-                return "Jakub Schwenkbeck - Software Engineer & Computer Science Student.";
-            case "projects":
-                return 'Visit: <a href="https://github.com/JakubSchwenkbeck" target="_blank">My GitHub</a>';
-            case "contact":
-                return 'Find me on <a href="https://linkedin.com/in/Jakub-Schwenkbeck" target="_blank">LinkedIn</a>';
-            case "clear":
-                terminalOutput.innerHTML = "";
-                return "";
-            case "help":
-                return "Available commands: whoami, projects, contact, clear, help.";
-            default:
-                return "Command not found. Type 'help' to see available commands.";
-        }
+
+ 
+    // Function to exit terminal mode and keep only the latest response.
+    function exitTerminal() {
+      const outputParagraphs = terminalOutput.querySelectorAll("p");
+      let lastLine = "";
+      if (outputParagraphs.length > 0) {
+        lastLine = outputParagraphs[outputParagraphs.length - 1].outerHTML;
+      }
+      terminalOutput.innerHTML = lastLine;
+      terminalBox.classList.remove("active");
+      terminalInput.blur();
     }
-});
+  
+  
+  
+    // Process commands on Enter key.
+    terminalInput.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        let command = terminalInput.value.trim();
+        terminalInput.value = "";
+  
+        // If command is "exit", exit terminal mode.
+        if (command.toLowerCase() === "exit") {
+          exitTerminal();
+          return;
+        }
+  
+        // Append the command and its response.
+        terminalOutput.innerHTML += `<p>$ ${command}</p>`;
+        let response = processCommand(command);
+        if (response) {
+          terminalOutput.innerHTML += `<p>${response}</p>`;
+        }
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+      }
+    });
+  
+    function processCommand(command) {
+      switch (command.toLowerCase()) {
+        case "whoami":
+          return "Jakub Schwenkbeck - Software Engineer & Computer Science Student.";
+        case "projects":
+          return 'Visit: <a href="https://github.com/JakubSchwenkbeck" target="_blank">My GitHub</a>';
+        case "contact":
+          return 'Find me on <a href="https://linkedin.com/in/Jakub-Schwenkbeck" target="_blank">LinkedIn</a>';
+        case "help":
+          return "Available commands: whoami, projects, contact, clear, exit, help.";
+        case "clear" || "cls" || "clr":
+          terminalOutput.innerHTML = "";
+          return "";
+       
+        default:
+          return "Command not found. Type 'help' to see available commands.";
+      }
+    }
+  });
+  

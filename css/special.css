@@ -12,25 +12,6 @@
     animation: typing 3s steps(20, end) infinite alternate;
 }
 
-/* Terminal Box */
-.terminal-box {
-    background: var(--secondary);
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    font-family: "JetBrains Mono", monospace;
-    font-size: 14px;
-    color: var(--text);
-    box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
-}
-
-.terminal-box::before {
-    content: "guest@website:~$";
-    color: var(--accent);
-    font-weight: bold;
-    margin-right: 5px;
-}
-
 /* Floating Text */
 .floating-text {
     font-size: 12px;

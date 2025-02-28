@@ -1,5 +1,6 @@
-/* Terminal Box */
+/* Normal (embedded) terminal styling */
 .terminal-box {
+    position: relative; /* Normal positioning */
     background: var(--secondary);
     padding: 20px;
     border-radius: 10px;
@@ -8,33 +9,73 @@
     font-size: 14px;
     color: var(--text);
     box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
+    width: 100%;
+    height: auto; /* Adapts to content */
+    overflow-y: hidden;
+    transition: all 0.3s ease;
 }
 
-.terminal-box::before {
-    content: "guest@website:~$";
-    color: var(--accent);
-    font-weight: bold;
-    margin-right: 5px;
+/* When active, it becomes a floating window */
+.terminal-box.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: #000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    width: 90%;
+    max-width: 600px;
+    height: 300px;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 15px;
 }
+
+/* Terminal input container */
 .terminal-input-container {
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
 
 .terminal-symbol {
-    color: #00ff00;
     margin-right: 5px;
 }
 
+/* Input styling */
 #terminal-input {
+    flex: 1;
     background: transparent;
     border: none;
     color: #00ff00;
     font-size: 16px;
     outline: none;
-    width: 100%;
 }
 
+/* Terminal output text */
 #terminal-output p {
     margin: 5px 0;
+}
+
+/* Close button, positioned at top-right within the active terminal */
+.close-terminal {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    margin: 5px; /* Small margin from the edge */
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-size: 10px;
+    cursor: pointer;
+    max-width: 15px;
+
+}
+
+/* Show close button only when terminal is active */
+.terminal-box.active .close-terminal {
+    display: block;
 }

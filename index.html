@@ -70,16 +70,18 @@
 
     <main>
 
-        <section class="terminal-box">
+        <section class="terminal-box" id="terminal-box">
             <div id="terminal-output">
                 <p>$ echo "Welcome to my workspace. I build software, explore AI, and work on compilers."</p>
             </div>
             <div class="terminal-input-container">
                 <span class="terminal-symbol">$</span>
-                <input type="text" id="terminal-input" autofocus>
+                <input type="text" id="terminal-input" placeholder="Click and type a command..." autofocus>
             </div>
+            <!-- Optional Close Button for manual exit -->
+            <button class="close-terminal" id="close-terminal" title="Exit Terminal">X</button>
         </section>
-        
+          
         
         <section id="about" class="content-section">
             <p>
