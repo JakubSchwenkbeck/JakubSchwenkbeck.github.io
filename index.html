@@ -16,12 +16,14 @@
     <link rel="stylesheet" href="css/special.css">
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/terminal.css">
+
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <p class="floating-text">system online...</p>
+        <!-- <p class="floating-text">system online...</p> -->
 
         <button id="theme-toggle">🌙</button>
 
@@ -69,8 +71,15 @@
     <main>
 
         <section class="terminal-box">
-            echo "Welcome to my workspace. I build software, explore AI, and work on compilers."
+            <div id="terminal-output">
+                <p>$ echo "Welcome to my workspace. I build software, explore AI, and work on compilers."</p>
+            </div>
+            <div class="terminal-input-container">
+                <span class="terminal-symbol">$</span>
+                <input type="text" id="terminal-input" autofocus>
+            </div>
         </section>
+        
         
         <section id="about" class="content-section">
             <p>
@@ -127,6 +136,7 @@
         <p><span>█</span> Built with <span>⌨️</span>, <span>🖱️</span> and <span>☕</span> in VSCode.</p>
     </footer>
     
+    <script src="js/terminal.js"></script>
 
 </body>
 </html>

@@ -31,4 +31,6 @@ body {
     overflow: hidden; /* Prevents unwanted scrolling */
     animation: fadeIn 0.7s ease-in-out;
     flex-direction: row; /* Default horizontal layout */
+    transition: background-color 0.5s ease, color 0.5s ease;
+
 }

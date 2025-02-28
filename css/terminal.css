@@ -1,0 +1,40 @@
+/* Terminal Box */
+.terminal-box {
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    color: var(--text);
+    box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
+}
+
+.terminal-box::before {
+    content: "guest@website:~$";
+    color: var(--accent);
+    font-weight: bold;
+    margin-right: 5px;
+}
+.terminal-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.terminal-symbol {
+    color: #00ff00;
+    margin-right: 5px;
+}
+
+#terminal-input {
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+}
+
+#terminal-output p {
+    margin: 5px 0;
+}
