@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             case "whoami":
                 return "Jakub Schwenkbeck - Software Engineer & Computer Science Student.";
             case "projects":
-                return 'Visit: <a href="https://github.com/JakubSchwenkbeck" target="_blank">My GitHub</a>';
+                return 'Visit: <a href="https://github.com/JakubSchwenkbeck/JakubSchwenkbeck.github.io/blob/main/sites/projects.html" target="_blank"> my Projects</a>';
             case "contact":
                 return 'Find me on <a href="https://linkedin.com/in/Jakub-Schwenkbeck" target="_blank">LinkedIn</a>';
             case "help":

@@ -19,133 +19,205 @@
 </head>
 <body>
     <header class="projects-header">
-        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        <a href="../index.html" class="back-link">← Back to Portfolio</a>
         <h1>Project Archive</h1>
     </header>
 
     <main class="projects-main">
         <section class="carousel">
-            <div class="carousel-container">
-                <!-- Effekt Language -->
-                <div class="carousel-item active">
-                    <h2>Effekt Programming Language</h2>
-                    <div class="project-content">
-                        <p class="project-description">
-                            Core contributor to a research language with effect handlers and effect polymorphism.
-                            Developed type system features and compiler optimizations in Scala.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-badge">Scala</span>
-                            <span class="tech-badge">Compiler Design</span>
-                            <span class="tech-badge">PL Research</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://effekt-lang.org" target="_blank" class="project-link">Project Site</a>
-                            <a href="https://github.com/effekt-lang/effekt" target="_blank" class="project-link">GitHub</a>
-                            <a href="#" class="project-link">Research Paper</a>
-                        </div>
-                    </div>
-                </div>
+           <!-- In your projects.html carousel section -->
+<!-- In your projects.html carousel section -->
+<div class="carousel-container">
 
-                <!-- VSCode Extension -->
-                <div class="carousel-item">
-                    <h2>Effekt VSCode Extension</h2>
-                    <div class="project-content">
-                        <p class="project-description">
-                            Developed IDE features including syntax highlighting, type checking,
-                            and language server protocol implementation in TypeScript.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-badge">TypeScript</span>
-                            <span class="tech-badge">LSP</span>
-                            <span class="tech-badge">VSCode API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://marketplace.visualstudio.com/items?itemName=effekt-lang.effekt" target="_blank" class="project-link">Marketplace</a>
-                            <a href="https://github.com/effekt-lang/effekt-vscode" target="_blank" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- MiniJava Compiler -->
-                <div class="carousel-item">
-                    <h2>MiniJava Compiler</h2>
-                    <div class="project-content">
-                        <p class="project-description">
-                            Full-stack compiler implementation using ANTLR for parsing and ASM for bytecode generation.
-                            Supports subset of Java language features.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-badge">Scala</span>
-                            <span class="tech-badge">ANTLR</span>
-                            <span class="tech-badge">ASM</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Brofian/compilerbau-minijava" target="_blank" class="project-link">GitHub</a>
-                            <a href="#" class="project-link">Project Docs</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Behavior Classification -->
-                <div class="carousel-item">
-                    <h2>AV Behavior Classification</h2>
-                    <div class="project-content">
-                        <p class="project-description">
-                            MATLAB-based RNN system for autonomous vehicle risk assessment.
-                            Award-winning project in MathWorks competition.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-badge">MATLAB</span>
-                            <span class="tech-badge">RNNs</span>
-                            <span class="tech-badge">Sensor Fusion</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JakubSchwenkbeck/Behavior-Classification-For-AV" target="_blank" class="project-link">GitHub</a>
-                            <a href="#" class="project-link">Certification</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DS/Algo Collection -->
-                <div class="carousel-item">
-                    <h2>Algorithmic Implementations</h2>
-                    <div class="project-content">
-                        <p class="project-description">
-                            Comprehensive collection of data structures and algorithms
-                            implemented in Scala with complexity analysis and benchmarks.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-badge">Scala</span>
-                            <span class="tech-badge">Algorithms</span>
-                            <span class="tech-badge">Benchmarking</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JakubSchwenkbeck/Datastructures-Algorithms" target="_blank" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Transformer Implementation -->
-                <div class="carousel-item">
-                    <h2>Transformer Architecture</h2>
-                    <div class="project-content">
-                        <p class="project-description">
-                            Ground-up implementation of transformer architecture in Rust
-                            with attention mechanisms and positional encoding.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-badge">Rust</span>
-                            <span class="tech-badge">PyTorch</span>
-                            <span class="tech-badge">LLMs</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/JakubSchwenkbeck/Transformer" target="_blank" class="project-link">GitHub</a>
-                            <a href="#" class="project-link">Demo</a>
-                        </div>
-                    </div>
-                </div>
+    <!-- VSCode Extension -->
+    <div class="carousel-item">
+        <div class="project-header">
+            <h2>Effekt VSCode Extension</h2>
+            <div class="project-badges">
+                <span class="version-badge">v0.2.3</span>
+                <span class="download-badge">⬇️ 100+</span>
             </div>
+        </div>
+        <div class="project-content">
+            <p class="project-description">
+                Official IDE support for Effekt, working on:
+            </p>
+            <ul class="feature-list">
+                <li>Comprehensive AI Asstistant </li>
+                <li>AI integration for better workflows</li>
+                <li>LLM APIs</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">VSCode API</span>
+                <span class="tech-badge">LLMs</span>
+            </div>
+            <div class="project-links">
+                <a href="https://marketplace.visualstudio.com/items?itemName=effekt-lang.effekt" 
+                   class="project-link">🛒 Marketplace</a>
+                <a href="https://github.com/effekt-lang/effekt-vscode" 
+                   class="project-link">📜 Source Code</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MiniJava Compiler -->
+    <div class="carousel-item">
+        <div class="project-header">
+            <h2>MiniJava Compiler</h2>
+            <div class="project-badges">
+                <span class="achievement-badge">🏆 Mini Compiler </span>
+                <span class="tech-badge">ANTLR4</span>
+                <span class="tech-badge">ASM</span>
+
+            </div>
+        </div>
+        <div class="project-content">
+            <p class="project-description">
+                Full-stack compiler for Java subset featuring:
+            </p>
+            <ul class="feature-list">
+                <li>Lexer/Parser with ANTLR</li>
+                <li>AST transformations</li>
+                <li>Semantic Check</li>
+                <li>JVM bytecode generation (ASM)</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tech-badge">Scala</span>
+                <span class="tech-badge">JVM</span>
+                <span class="tech-badge">ASM</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/Brofian/compilerbau-minijava" 
+                   class="project-link">📦 GitHub Repo</a>
+                <a href="https://github.com/Brofian/compilerbau-minijava/blob/main/README.md" class="project-link">📚 Documentation</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Behavior Classification -->
+    <div class="carousel-item">
+        <div class="project-header">
+            <h2>AV Behavior Classification</h2>
+            <div class="project-badges">
+                <span class="achievement-badge">🏆 MathWorks Winner</span>
+                <span class="research-badge">Invited to Ready Tensor</span>
+            </div>
+        </div>
+        <div class="project-content">
+            <p class="project-description">
+                MATLAB-based RNN system for autonomous vehicle risk assessment.
+                Key features include:
+            </p>
+            <ul class="feature-list">
+                <li>Recurrent Neural Network (RNN) implementation</li>
+                <li>Real-time risk level classification</li>
+                <li>Sensor fusion for multi-modal data</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tech-badge">MATLAB</span>
+                <span class="tech-badge">RNNs</span>
+                <span class="tech-badge">Sensor Fusion</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/JakubSchwenkbeck/Behavior-Classification-For-AV" 
+                   class="project-link">📦 GitHub Repo</a>
+                <a href="https://github.com/JakubSchwenkbeck/Behavior-Classification-For-AV/assets/JakubSchwenkbeck-certificate.pdf" class="project-link">🏆 Certification</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- DS/Algo Collection -->
+    <div class="carousel-item">
+        <div class="project-header">
+            <h2>Data Structures & Algorithms</h2>
+            <div class="project-badges">
+                <span class="github-badge">⭐ Scala</span>
+            </div>
+        </div>
+        <div class="project-content">
+            <p class="project-description">
+                Comprehensive collection of data structures and algorithms
+                implemented in Scala with:
+            </p>
+            <ul class="feature-list">
+                <li>Complexity analysis</li>
+                <li>Benchmarking suite</li>
+                <li>Interactive examples</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tech-badge">Scala</span>
+                <span class="tech-badge">Algorithms</span>
+                <span class="tech-badge">Benchmarking</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/JakubSchwenkbeck/Datastructures-Algorithms" 
+                   class="project-link">📦 GitHub Repo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Transformer Implementation -->
+    <div class="carousel-item">
+        <div class="project-header">
+            <h2>Transformer Architecture</h2>
+            <div class="project-badges">
+                <span class="github-badge">⭐ Rust</span>
+                <span class="github-badge"> LLMs</span>
+            </div>
+        </div>
+        <div class="project-content">
+            <p class="project-description">
+                Ground-up implementation of transformer architecture in Rust
+                with features including:
+            </p>
+            <ul class="feature-list">
+                <li>Attention mechanisms</li>
+                <li>Positional encoding</li>
+                <li>Multi-head attention</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tech-badge">Rust</span>
+                <span class="tech-badge">Software Engineering</span>
+                <span class="tech-badge">LLMs</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/JakubSchwenkbeck/Transformer" 
+                   class="project-link">📦 GitHub Repo</a>
+            </div>
+        </div>
+    </div>
+      <!-- Effekt Language -->
+      <div class="carousel-item">
+        <div class="project-header">
+            <h2>Effekt Language</h2>
+            <div class="project-badges">
+                <span class="github-badge">⭐ 345</span>
+                <span class="github-badge">🍴 32</span>
+            </div>
+        </div>
+        <div class="project-content">
+            <p class="project-description">
+                Research language with algebraic effects and effect polymorphism.
+                Contributed to core compiler features including:
+            </p>
+            <ul class="feature-list">
+                <li>stdlib features for Lists and Exceptions</li>
+                <li>Compiler Crash reports</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tech-badge">Scala 3</span>
+                <span class="tech-badge">Kiama</span>
+                <span class="tech-badge">Type Theory</span>
+            </div>
+            <div class="project-links">
+                <a href="https://effekt-lang.org" class="project-link">🌐 Project Site</a>
+                <a href="https://github.com/effekt-lang/effekt" class="project-link">📦 GitHub Repo</a>
+            </div>
+        </div>
+    </div>
+</div>
 
             <!-- Carousel Controls -->
             <button class="carousel-control prev" aria-label="Previous project">‹</button>
@@ -164,8 +236,10 @@
     </main>
 
     <footer class="projects-footer">
-        <p>Want to see the terminal? <a href="index.html#terminal-box">Access Console</a></p>
-        <p>© 2023 Jakub Schwenkbeck. All systems operational.</p>
+        <p>Want to see the terminal? <a href="../index.html#terminal-box">Access Console</a></p>
+        <p>© 2025 Jakub Schwenkbeck. All systems operational.</p>
     </footer>
+
+    <script src="../js/carousel.js"></script>
 </body>
 </html>
