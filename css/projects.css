@@ -1,0 +1,248 @@
+/* projects.css */
+/* ===== Base Structure ===== */
+.projects-header {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+
+.back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    color: #88ddff;
+    text-shadow: 0 0 8px rgba(102, 204, 255, 0.4);
+}
+
+.projects-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+/* ===== Carousel System ===== */
+.carousel {
+    position: relative;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--primary);
+    box-shadow: 0 0 20px rgba(102, 204, 255, 0.1);
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 40px;
+    opacity: 0.3;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ===== Project Cards ===== */
+.project-content {
+    background: var(--secondary);
+    border-radius: 8px;
+    padding: 30px;
+    border: 1px solid var(--border);
+    position: relative;
+}
+
+.project-content::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, var(--accent), transparent 70%);
+    z-index: -1;
+}
+
+.project-description {
+    color: var(--subtext);
+    line-height: 1.7;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+
+/* ===== Tech Stack Badges ===== */
+.tech-stack {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.tech-badge {
+    background: var(--primary);
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 10px rgba(102, 204, 255, 0.3);
+}
+
+/* ===== Project Links ===== */
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.project-link {
+    background: var(--primary);
+    color: var(--accent);
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.project-link:hover {
+    background: var(--accent);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px rgba(102, 204, 255, 0.3);
+}
+
+/* ===== Carousel Controls ===== */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--secondary);
+    color: var(--accent);
+    border: 1px solid var(--border);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-control.prev { left: 20px; }
+.carousel-control.next { right: 20px; }
+
+.carousel-control:hover {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 15px rgba(102, 204, 255, 0.3);
+}
+
+/* ===== Indicators ===== */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--secondary);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--accent);
+    box-shadow: 0 0 8px rgba(102, 204, 255, 0.3);
+}
+
+/* ===== Footer ===== */
+.projects-footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--subtext);
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+}
+
+.projects-footer a {
+    color: var(--accent);
+    text-decoration: none;
+    position: relative;
+}
+
+.projects-footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.projects-footer a:hover::after {
+    width: 100%;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .carousel-item {
+        padding: 20px;
+    }
+    
+    .project-content {
+        padding: 20px;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .carousel-control {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-main {
+        margin-top: 60px;
+        padding: 10px;
+    }
+    
+    .carousel-item {
+        padding: 15px;
+    }
+}
