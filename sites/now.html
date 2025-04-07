@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jakub Schwenkbeck – Now</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/typography.css" />
+  <link rel="stylesheet" href="../css/now.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Added for icons -->
+</head>
+<header>
+  <button id="theme-toggle">🌙</button> <!-- Theme toggle button -->
+
+  <script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+
+      // Toggle icon between moon 🌙 and sun ☀️
+      document.getElementById("theme-toggle").textContent =
+        document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+    });
+  </script>
+</header>
+<body>
+  <main class="now-container">
+    <a href="../index.html" class="back-link">← Back to Portfolio</a>
+    <h1 class="now-heading">Now</h1>
+
+    <section class="now-body">
+      <p>Hey there 👋 I'm Jakub. This page is a snapshot of what I’m up to these days.</p>
+
+      <h2>🌱 Life</h2>
+      <ul class="tech-list">
+        <li><i class="fas fa-laptop-code"></i> Living the student life in Tübingen, Germany 🇩🇪 — enjoying the summer vibes.</li>
+        <li><i class="fas fa-fist-raised"></i> Training in MMA 🥋 and sharpening my skills, going to the gym.</li>
+        <li><i class="fas fa-utensils"></i> Trying to cook more and focus on healthier meals 🍲.</li>
+      </ul>
+
+      <h2>📚 Learning</h2>
+      <ul class="tech-list">
+        <li><i class="fas fa-language"></i> Improving my French and Russian skills.</li>
+        <li><i class="fas fa-brain"></i> Exploring AI, Neural Networks, and Large Language Models (LLMs) at university and on my own — always looking for new developments.</li>
+      </ul>
+
+      <h2>👨‍💻 Coding Vibes</h2>
+      <ul class="tech-list">
+        <li><i class="fas fa-cogs"></i> Using Rust more and more for side projects — it's a powerful language.</li>
+        <li><i class="fas fa-code"></i> Still a fan of Scala and MATLAB — but always exploring!</li>
+      </ul>
+
+      <h2>🚧 Working on</h2>
+      <ul class="tech-list">
+        <li><i class="fas fa-laptop"></i> Building the next generation of AI-assisted programming tools — developing an intelligent assistant for the Effekt VSCode extension.</li>
+      </ul>
+
+      <h2>📖 Reading List</h2>
+      <ul class="tech-list">
+        <li><i class="fas fa-book"></i> <strong>Star Wars: The Old Republic – Deceived</strong></li>
+        <li><i class="fas fa-book"></i> <strong>Richard David Precht – Das Jahrhundert der Toleranz</strong></li>
+        <li><i class="fas fa-book"></i> <strong>Richard David Precht –Lenin kam nur bis Lüdenscheid</strong></li>
+        <li><i class="fas fa-book"></i> <strong>Judith Hermann – Sommerhaus, später</strong></li>
+      </ul>
+
+      <p class="now-note">Last updated: April 2025</p>
+    </section>
+
+    <footer class="now-footer">
+      <p>This is a <a href="https://nownownow.com/about" target="_blank">Now page</a> — inspired by Derek Sivers and Niklas Steenfatt.</p>
+    </footer>
+  </main>
+</body>
+</html>
