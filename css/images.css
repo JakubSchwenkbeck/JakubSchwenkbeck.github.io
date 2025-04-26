@@ -1,13 +1,26 @@
-/* images.css */
-/* Image (Shrunk and Styled) */
+/* Image (Bigger, Styled, Smooth Hover) */
 img {
-    max-width: 200px; /* Smaller size */
-    border-radius: 10px;
-    margin-top: 10px;
-    transition: transform 0.3s ease-in-out, opacity 0.3s;
+    max-width: 280px; /* Increased size for more impact */
+    border-radius: 14px;
+    margin-top: 15px;
+    transition: transform 0.4s ease, opacity 0.3s, box-shadow 0.4s;
+    box-shadow: 0 0 12px rgba(102, 204, 255, 0.15);
 }
 
 img:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+    transform: scale(1.08) rotate(1deg);
+    opacity: 0.95;
+    box-shadow: 0 0 20px rgba(102, 204, 255, 0.3);
+}
+
+/* Specific Styling for Logos */
+.logo {
+    max-width: 200px; /* Separate sizing for logos */
+    transition: transform 0.4s ease, filter 0.4s;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(2deg);
+    filter: brightness(1.1);
+    box-shadow: 0 0 18px rgba(102, 204, 255, 0.4);
 }

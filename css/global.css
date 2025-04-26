@@ -1,4 +1,3 @@
-/* global.css */
 /* Global Styles */
 * {
     margin: 0;
@@ -24,13 +23,43 @@ body {
     background: var(--background);
     color: var(--text);
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Changed to column for a more vertical site layout */
+    justify-content: flex-start;
     align-items: center;
     height: auto;
+    min-height: 100vh; /* Ensure it always fills at least full screen height */
     padding: 20px;
-    overflow-y: auto; /* allows vertical scrolling */ 
+    overflow-x: hidden;
+    overflow-y: auto;
     animation: fadeIn 0.7s ease-in-out;
-    flex-direction: row; /* Default horizontal layout */
     transition: background-color 0.5s ease, color 0.5s ease;
+}
 
+/* Section Styling */
+section {
+    width: 100%;
+    max-width: 1000px; /* Wider layout */
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--primary);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 0 10px rgba(102, 204, 255, 0.15);
+    transition: box-shadow 0.3s ease-in-out, background 0.3s;
+}
+
+/* Section Hover */
+section:hover {
+    box-shadow: 0 0 20px rgba(102, 204, 255, 0.25);
+}
+
+/* Light Mode */
+.light-mode {
+    --background: #ffffff;
+    --primary: #f0f0f0;
+    --secondary: #e0e0e0;
+    --accent: #0077ff;
+    --text: #222;
+    --subtext: #555;
+    --border: #ccc;
 }

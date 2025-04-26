@@ -5,7 +5,7 @@ button {
     padding: 12px;
     background: var(--accent);
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     color: #000;
     font-size: 14px;
     font-weight: bold;
@@ -17,7 +17,7 @@ button {
 
 button:hover {
     background: #88ddff;
-    box-shadow: 0 0 10px rgba(102, 204, 255, 0.5);
+    box-shadow: 0 0 12px rgba(102, 204, 255, 0.5);
     transform: scale(1.05);
 }
 
@@ -33,8 +33,8 @@ button:active {
     background: var(--secondary);
     color: var(--text);
     border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 5px 10px;
+    border-radius: 8px;
+    padding: 6px 12px;
     font-size: 12px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.1s ease-in-out;

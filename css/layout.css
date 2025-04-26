@@ -1,21 +1,72 @@
-/* layout.css */
 /* Container */
 .container {
     background: var(--primary);
-    padding: 20px;
-    border-radius: 12px;
+    padding: 30px;
+    border-radius: 16px;
     border: 1px solid var(--border);
-    box-shadow: 0 0 10px rgba(102, 204, 255, 0.2);
-    width: 420px;
+    box-shadow: 0 0 12px rgba(102, 204, 255, 0.2);
+    width: 100%;
+    max-width: 480px;
     text-align: center;
-    animation: popIn 0.5s ease-in-out;
+    animation: popIn 0.6s ease-in-out;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 0 18px rgba(102, 204, 255, 0.35);
+    transform: translateY(-5px);
 }
 
 /* Header */
 h1 {
-    color: var(--text);
-    font-size: 22px;
-    margin-bottom: 10px;
+    color: var(--accent);
+    font-size: 26px;
+    margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 5px rgba(102, 204, 255, 0.4);
+}
+
+/* Sub-Headers */
+h2, h3 {
+    color: var(--text);
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--accent);
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: var(--accent);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
 }

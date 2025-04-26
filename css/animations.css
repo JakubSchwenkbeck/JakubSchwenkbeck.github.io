@@ -1,48 +1,88 @@
-/* animations.css */
-/* Fade In Animation */
+/* Fade In Effect */
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Pop In Animation */
+/* Pop In Effect */
 @keyframes popIn {
-    from {
-        transform: scale(0.95);
-        opacity: 0.8;
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
     }
-    to {
+    100% {
         transform: scale(1);
         opacity: 1;
     }
 }
 
-/* Blink Animation */
-@keyframes blink {
-    50% {
-        opacity: 0.3;
-    }
+/* Section Fade-In */
+section {
+    animation: fadeIn 0.7s ease-out;
 }
 
-/* Typing Effect Animation */
+/* Header Typing Animation */
 @keyframes typing {
-    from {
+    0% {
         width: 0;
     }
-    to {
+    100% {
         width: 100%;
     }
 }
 
-/* Float Text Animation */
-@keyframes floatText {
-    0% { transform: translateY(0); opacity: 0.5; }
-    50% { transform: translateY(-10px); opacity: 1; }
-    100% { transform: translateY(0); opacity: 0.5; }
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--accent);
+    animation: typing 3s steps(40) 1s 1 normal both;
+}
+
+/* Button Hover Animation */
+button {
+    transition: transform 0.1s ease-in-out, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Image Hover Animation */
+img {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Smooth Fade In for Entire Page */
+body {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Links Animation on Hover */
+.link-box {
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+}
+
+.link-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(102, 204, 255, 0.3);
+}
+
+/* Custom Scrollbar Animation */
+::-webkit-scrollbar-thumb {
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #88ddff;
 }
