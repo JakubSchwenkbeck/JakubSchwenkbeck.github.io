@@ -86,11 +86,10 @@
 /* Achievements Special Section */
 #achievements {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
-    padding: 40px;
+    padding: 15px; /* Reduced padding */
     border-radius: 18px;
-    border: 2px dashed var(--accent);
     box-shadow: 0 0 25px rgba(102, 204, 255, 0.3);
-    margin-top: 40px;
+    margin-top: 20px; /* Reduced margin-top */
     transition: all 0.5s ease;
 }
 
@@ -99,28 +98,20 @@
     box-shadow: 0 0 30px rgba(102, 204, 255, 0.5);
 }
 
-#achievements h2 {
-    text-align: center;
-    color: var(--accent);
-    font-size: 28px;
-    margin-bottom: 30px;
-    text-shadow: 0 0 6px rgba(102, 204, 255, 0.6);
-}
 
-/* Achievements Boxes */
+/* Achievements Boxes - Even wider with bigger images */
 #achievements .links-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    display: flex; /* Horizontal layout */
+    justify-content: center;
+    gap: 25px; /* Adjusted gap for wider spacing */
 }
 
 #achievements .link-box {
     background: var(--background);
     border: 2px solid var(--accent);
-    padding: 25px;
+    padding: 20px; /* Slightly increased padding */
     border-radius: 16px;
-    width: 100%;
-    max-width: 400px;
+    width: 350px; /* Increased width for boxes */
     transition: all 0.3s ease-in-out;
 }
 
@@ -131,7 +122,15 @@
 }
 
 #achievements .link-box img {
-    max-width: 100px; /* Even bigger in achievements */
+    max-width: 200px; /* Significantly increased image size */
+    margin-bottom: 10px;
+    filter: brightness(0.9);
+    transition: filter 0.2s ease-in-out, transform 0.2s;
+}
+
+#achievements .link-box p {
+    font-size: 14px;
+    text-align: center;
 }
 
 /* Small Blog Link */
