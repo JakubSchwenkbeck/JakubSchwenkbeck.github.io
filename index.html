@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> 
     <title>Jakub Schwenkbeck</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -17,65 +19,32 @@
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/terminal.css">
-
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <!-- <p class="floating-text">system online...</p> -->
-
-        <button id="theme-toggle">🌙</button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="sites/now.html">What I am doing right now</a></li> <!-- Link to your 'Now' page -->
+                <li><a href="sites/now.html">What I am doing right now</a></li>
             </ul>
+            <button id="theme-toggle">🌙</button>
         </nav>
-        <script>
-            document.getElementById("theme-toggle").addEventListener("click", () => {
-                document.body.classList.toggle("light-mode");
-        
-                // Toggle icon between moon 🌙 and sun ☀️
-                document.getElementById("theme-toggle").textContent = 
-                    document.body.classList.contains("light-mode") ? "☀️" : "🌙";
-            });
-        </script>
-        
 
         <div class="hero">
             <img src="assets/Profile_Picture.jpg" alt="Profile Picture" class="profile-pic">
             <div class="hero-text">
                 <h1 class="typing-effect">@Jakub Schwenkbeck</h1>
-
                 <p>Computer Science Student | Software Engineer</p>
-                <br>
                 <p><span role="img" aria-label="location">📍</span> Tübingen, Germany</p>
-               
                 <p id="current-time"></p>
-                <script>
-                    function updateTime() {
-                        const timeElement = document.getElementById('current-time');
-                        const now = new Date();
-                        const hours = now.getHours().toString().padStart(2, '0');
-                        const minutes = now.getMinutes().toString().padStart(2, '0');
-                        const seconds = now.getSeconds().toString().padStart(2, '0');
-                        
-                        timeElement.textContent = `Current time: ${hours}:${minutes}:${seconds}`;
-                    }
-                
-                    setInterval(updateTime, 1000); // Update the time every second
-                    updateTime(); // Initial call to display the time immediately
-                </script>
-                
             </div>
-            
         </div>
     </header>
 
     <main>
 
-        <section class="terminal-box" id="terminal-box">
+        <section class="terminal-box fade-in" id="terminal-box">
             <div id="terminal-output">
                 <p>$ echo "Welcome to my workspace. I build software, explore AI, and work on compilers."</p>
             </div>
@@ -85,83 +54,117 @@
             </div>
             <button id="close-terminal" class="close-terminal" title="Exit Terminal">X</button>
         </section>
-        
-          
-        
-        <section id="about" class="content-section">
-            <p>
-                I'm a <strong>Computer Science student</strong> and <strong> Software Engineer </strong> <strong>building professional software, AI, compilers and more</strong>!
-               
-            </p>
-    
-            <p>
-                Currently working on <a href="https://effekt-lang.org" target="_blank">Effekt Lang</a>and its <a href="https://github.com/effekt-lang/effekt-vscode" target="_blank">VSCode extension</a>.
-            </p>
-        
-            <p>
-                Previously, I was a Working Student at <a href="https://www.marelli.com" target="_blank">Marelli</a>, where I developed and maintained a large-scale, internationally deployed software solution in the automotive industry.  
-            </p>
+
+        <section id="about" class="content-section fade-in">
+            <p>I'm a <strong>Computer Science student</strong> and <strong>Software Engineer</strong> building professional software, AI, compilers and more!</p>
+            <p>Currently working on <a href="https://effekt-lang.org" target="_blank">Effekt Lang</a> and its <a href="https://github.com/effekt-lang/effekt-vscode" target="_blank">VSCode extension</a>.</p>
+            <p>Previously, I was a Working Student at <a href="https://www.marelli.com" target="_blank">Marelli</a>, developing and maintaining a large-scale automotive software solution.</p>
         </section>
 
-        <section id="projects" class="content-section">
-            <h2>Work experience</h2>
-
-           <div class="links-container">
-    <a href="https://github.com/JakubSchwenkbeck" target="_blank" class="link-box">
-        <img src="assets/gh.png" alt="GitHub Logo">
-        <p>See my GitHub</p>
-    </a>
-
-    <a href="https://effekt-lang.org" target="_blank" class="link-box">
-        <img src="assets/icon.png" alt="Effekt Logo">
-        <p>Part of the Effekt Research Group</p>
-    </a>
-
-    <a href="https://github.com/effekt-lang/effekt-vscode" target="_blank" class="link-box">
-        <img src="assets/vscode.png" alt="VSCode Logo">
-        <p>Currently working on the VSCode extension</p>
-    </a>
-
-    <a href="https://www.marelli.com" target="_blank" class="link-box">
-        <img src="assets/marelli-black.png" alt="Marelli Logo">
-        <p>Previously Developer at Marelli</p>
-    </a>
-
-  
-</div>
-
-        </section>
-        <section id="achievements" class="content-section">
+        <section id="achievements" class="content-section fade-in">
             <h2>🏆 Achievements</h2>
-        
+
             <div class="links-container">
                 <a href="https://www.amazonfutureengineer.com/" target="_blank" class="link-box">
                     <img src="assets/amazon_f_e.jpg" alt="Amazon Future Engineer Logo">
                     <p>Selected Participant, Amazon Future Engineer Program</p>
                 </a>
-        
+
                 <a href="https://www.deutschlandstipendium.de/" target="_blank" class="link-box">
                     <img src="assets/Logo-Deutschlandstipendium-1.jpg" alt="Deutschlandstipendium Logo">
                     <p>Recipient of the Germany Scholarship</p>
                 </a>
             </div>
         </section>
-        
-        <section id="blog" class="content-section">
+
+        <section id="projects" class="content-section fade-in">
+            <h2>💼 Work Experience</h2>
+
+            <div class="links-container">
+                <a href="https://github.com/JakubSchwenkbeck" target="_blank" class="link-box">
+                    <img src="assets/gh.png" alt="GitHub Logo">
+                    <p>See my GitHub</p>
+                </a>
+
+                <a href="https://effekt-lang.org" target="_blank" class="link-box">
+                    <img src="assets/icon.png" alt="Effekt Logo">
+                    <p>Part of the Effekt Research Group</p>
+                </a>
+
+                <a href="https://github.com/effekt-lang/effekt-vscode" target="_blank" class="link-box">
+                    <img src="assets/vscode.png" alt="VSCode Logo">
+                    <p>Currently working on the VSCode extension</p>
+                </a>
+
+                <a href="https://www.marelli.com" target="_blank" class="link-box">
+                    <img src="assets/marelli-black.png" alt="Marelli Logo">
+                    <p>Previously Developer at Marelli</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="blog" class="content-section fade-in">
             <p><a href="sites/BlogMainPage.html" class="small-blog-link">Check out my blog →</a></p>
         </section>
-    
+
     </main>
 
-    <footer class="sidebar">
-     <p>Connect with me on <a href="https://linkedin.com/in/Jakub-Schwenkbeck" target="_blank">LinkedIn</a></p>
-    </footer>
-
     <footer class="footer">
+        <p>Connect with me on <a href="https://linkedin.com/in/Jakub-Schwenkbeck" target="_blank">LinkedIn</a></p>
         <p><span>█</span> Built with <span>⌨️</span>, <span>🖱️</span> and <span>☕</span> in VSCode.</p>
     </footer>
-    
+
+    <!-- Scripts -->
     <script src="js/terminal.js"></script>
+    <script>
+        // Theme toggle
+        document.getElementById("theme-toggle").addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
+            document.getElementById("theme-toggle").textContent = 
+                document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+        });
+
+        // Live Clock
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            timeElement.textContent = `Current time: ${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Fade-in animations
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.3 };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+
+    <!-- Bonus fade-in CSS -->
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 
 </body>
 </html>
