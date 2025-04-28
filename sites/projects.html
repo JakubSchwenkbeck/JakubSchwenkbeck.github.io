@@ -36,7 +36,7 @@
             <h2>Effekt VSCode Extension</h2>
             <div class="project-badges">
                 <span class="version-badge">v0.2.3</span>
-                <span class="download-badge">⬇️ 100+</span>
+                <span class="download-badge">⬇️ 120+</span>
             </div>
         </div>
         <div class="project-content">
@@ -61,7 +61,39 @@
             </div>
         </div>
     </div>
-
+ <!-- Effekt Language -->
+ <div class="carousel-item">
+    <div class="project-header">
+        <h2>Effekt Language</h2>
+        <div class="project-badges">
+            <span class="github-badge">⭐ <span id="github-stars">345</span></span>
+            <span class="github-badge">🍴 <span id="github-forks">32</span></span>
+            
+        </div>
+    </div>
+    <div class="project-content">
+        <p class="project-description">
+            Research language with algebraic effects and effect polymorphism.
+            Contributed to core compiler features including:
+        </p>
+        <ul class="feature-list">
+            <li>Implemented positional tracking (spans) throughout the syntax tree to enable more precise error reporting and tooling support.</li>
+            <li>Introduced specific compiler messages for disambiguating operations with identical names across different effects.</li>
+            <li>Enhanced compiler diagnostics with detailed crash reports.</li>
+            <li>stdlib features for Lists and Exceptions</li>
+ 
+        </ul>
+        <div class="tech-stack">
+            <span class="tech-badge">Scala 3</span>
+            <span class="tech-badge">Kiama</span>
+            <span class="tech-badge">Type Theory</span>
+        </div>
+        <div class="project-links">
+            <a href="https://effekt-lang.org" class="project-link">🌐 Project Site</a>
+            <a href="https://github.com/effekt-lang/effekt" class="project-link">📦 GitHub Repo</a>
+        </div>
+    </div>
+</div>
     <!-- MiniJava Compiler -->
     <div class="carousel-item">
         <div class="project-header">
@@ -188,35 +220,7 @@
             </div>
         </div>
     </div>
-      <!-- Effekt Language -->
-      <div class="carousel-item">
-        <div class="project-header">
-            <h2>Effekt Language</h2>
-            <div class="project-badges">
-                <span class="github-badge">⭐ 345</span>
-                <span class="github-badge">🍴 32</span>
-            </div>
-        </div>
-        <div class="project-content">
-            <p class="project-description">
-                Research language with algebraic effects and effect polymorphism.
-                Contributed to core compiler features including:
-            </p>
-            <ul class="feature-list">
-                <li>stdlib features for Lists and Exceptions</li>
-                <li>Compiler Crash reports</li>
-            </ul>
-            <div class="tech-stack">
-                <span class="tech-badge">Scala 3</span>
-                <span class="tech-badge">Kiama</span>
-                <span class="tech-badge">Type Theory</span>
-            </div>
-            <div class="project-links">
-                <a href="https://effekt-lang.org" class="project-link">🌐 Project Site</a>
-                <a href="https://github.com/effekt-lang/effekt" class="project-link">📦 GitHub Repo</a>
-            </div>
-        </div>
-    </div>
+     
 </div>
 
             <!-- Carousel Controls -->
@@ -241,5 +245,20 @@
     </footer>
 
     <script src="../js/carousel.js"></script>
+    <script>
+        async function updateGitHubBadges() {
+            try {
+                const response = await fetch('https://api.github.com/repos/effekt-lang/effekt');
+                const data = await response.json();
+                document.getElementById('github-stars').textContent = data.stargazers_count;
+                document.getElementById('github-forks').textContent = data.forks_count;
+            } catch (error) {
+                console.error('Failed to fetch GitHub data:', error);
+            }
+        }
+        
+        updateGitHubBadges();
+        </script>
+        
 </body>
 </html>
