@@ -63,3 +63,15 @@ section:hover {
     --subtext: #555;
     --border: #ccc;
 }
+
+/* Make entire section clickable when wrapped with .section-link */
+.content-section > .section-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.content-section > .section-link:focus,
+.content-section > .section-link:hover {
+    text-decoration: none;
+}
