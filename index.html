@@ -7,188 +7,128 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> 
     <title>Jakub Schwenkbeck</title>
     
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/images.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/special.css">
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/terminal.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home (You're here)</a></li>
-                <li><a href="sites/now.html">What I am doing right now</a></li>
-                <li><a href="sites/projects.html">Project overview</a></li>
-            </ul>
-            <button id="theme-toggle">🌙</button>
+        <nav class="navbar">
+            <h1 class="nav-title">Jakub Schwenkbeck</h1>
         </nav>
 
         <div class="hero">
             <img src="assets/linked_in_picture.png" alt="Profile Picture" class="profile-pic">
             <div class="hero-text">
-                <h1 class="typing-effect">@Jakub Schwenkbeck</h1>
-                <p>Computer Science Student | Software Engineer</p>
-                <p><span role="img" aria-label="location">📍</span> Stockholm, Sweden</p>
-                <p id="current-time"></p>
+                <h1>Jakub Schwenkbeck</h1>
+                <p class="subtitle">Computer Science Student, University of Tübingen</p>
+                <p class="subtitle">Bachelor's Thesis, Max Planck Institute for Intelligent Systems</p>
             </div>
         </div>
     </header>
 
     <main>
-
-        <section class="terminal-box fade-in" id="terminal-box">
-            <div id="terminal-output">
-                <p>$ echo "Welcome to my workspace. I build software, explore AI, and work on compilers."</p>
-            </div>
-            <div class="terminal-input-container">
-                <span class="terminal-symbol">$</span>
-                <input type="text" id="terminal-input" placeholder="Click and type a command...">
-            </div>
-            <button id="close-terminal" class="close-terminal" title="Exit Terminal">X</button>
+        <section id="about" class="content-section">
+            <h2>About</h2>
+            <p>I am a final-year Computer Science student at the University of Tübingen, currently conducting my bachelor's thesis at the Max Planck Institute for Intelligent Systems (MPI-IS), Flight Robotics and Perception Group. My research focuses on computer vision for robotics and efficient machine learning systems for edge deployment.</p>
         </section>
 
-        <section id="about" class="content-section fade-in">
-            <p>🎯 I'm a <strong>Computer Science student</strong> at the <a href="https://uni-tuebingen.de" target="_blank">University of Tübingen</a>, currently on exchange at <a href="https://www.su.se" target="_blank">Stockholm University</a>, taking courses in <strong>Data Science</strong>, <strong>Explainable AI</strong>, <strong>Embedded ML</strong> and <strong>Quantum Programming</strong>.</p>
-            <p>🤝 As part of the <strong>Amazon Future Engineer</strong> program I collaborated with AWS within the Cyber Valley ecosystem, gaining experience with large-scale AI infrastructure and real-world systems.</p>
-            <p>🛠️ At Tübingen, I worked on AI- and compiler-assisted programming for the <a href="https://effekt-lang.org" target="_blank">Effekt</a> language, developing a <strong>VS Code extension</strong> that integrates static compiler data with autonomous agents for intelligent code generation. I am no longer employed at Effekt.</p>
-            <p>🏭 Earlier at <a href="https://www.marelli.com" target="_blank">Marelli Automotive Lighting</a> I optimized large-scale engineering software and redesigned systems for performance and reliability.</p>
-            <p>🔬 I'm broadly interested in AI systems, embedded machine learning, intelligent agents, quantum programming, and programming language design.</p>
-            <p>Outside of tech, I enjoy sports, reading, and student life adventures.</p>
+        <section id="research" class="content-section">
+            <h2>Research Interests</h2>
+            <ul class="research-list">
+                <li>Edge AI and real-time inference</li>
+                <li>Computer vision for robotics</li>
+                <li>Autonomous systems perception</li>
+                <li>Visual re-identification systems</li>
+                <li>Sim-to-real transfer learning</li>
+            </ul>
         </section>
-        
-        
 
-        <section id="projects" class="content-section fade-in">
-            <h2>💼 Work Experience</h2>
+        <section id="current-research" class="content-section">
+            <h2>Current Research</h2>
+            <h3>Bachelor Thesis: Viewpoint-Aware Animal Re-Identification</h3>
+            <p><em>Flight Robotics & Perception Group, <a href="https://is.mpg.de/" target="_blank">Max Planck Institute for Intelligent Systems</a></em></p>
+            <p>At the Flight Robotics and Perception group, I am developing a novel AI solution to enhance animal re-identification in the RAPID pipeline. My work focuses on integrating a 2D pose estimator and a specialized viewpoint estimation module to address perspective-based mismatches. The project emphasizes efficient edge deployment, ensuring high-accuracy orientation filtering and real-time inference speeds for drone-based hardware.</p>
+            <p><em>Supervisors: Prof. <a href="https://www.cvlibs.net/" target="_blank">Andreas Geiger</a>, Jun. Prof. Dr. <a href="https://is.mpg.de/ps/person/aahmad" target="_blank">Aamir Ahmad</a>, PhD student <a href="https://is.mpg.de/ps/person/azabo" target="_blank">András Zábó</a></em></p>
+        </section>
 
-            <div class="links-container">
-            
+        <section id="experience" class="content-section">
+            <h2>Experience</h2>
 
-                <a href="https://effekt-lang.org" target="_blank" class="link-box">
-                    <img src="assets/icon.png" alt="Effekt Logo">
-                    <p>Worked with the Effekt Research Group</p>
-                </a>
-
-                <a href="https://github.com/effekt-lang/effekt-vscode" target="_blank" class="link-box">
-                    <img src="assets/vscode.png" alt="VSCode Logo">
-                    <p>Developed a VSCode extension for Effekt</p>
-                </a>
-
-                <a href="https://www.marelli.com" target="_blank" class="link-box">
-                    <img src="assets/marelli-black.png" alt="Marelli Logo">
-                    <p>Previously Developer at Marelli</p>
-                </a>
-
-                <a href="https://github.com/JakubSchwenkbeck" target="_blank" class="link-box">
-                    <img src="assets/gh.png" alt="GitHub Logo">
-                    <p>See my GitHub</p>
-                </a>
+            <div class="experience-item">
+                <h3><a href="https://is.mpg.de/" target="_blank">Max Planck Institute for Intelligent Systems</a></h3>
+                <p class="role-date">Student Researcher - GRADE Project, February 2026 - Present</p>
+                <p>Building realistic dynamic simulation environments for robotics research, enabling high-quality synthetic data generation and advanced perception system validation.</p>
             </div>
-        </section>
-        <section id="achievements" class="content-section fade-in">
-            <h2>🏆 Achievements</h2>
 
-            <div class="links-container">
-                <a href="https://www.amazonfutureengineer.com/" target="_blank" class="link-box">
-                    <img src="assets/amazon_f_e.jpg" alt="Amazon Future Engineer Logo">
-                    <p>Selected Participant, Amazon Future Engineer Program</p>
-                </a>
+            <div class="experience-item">
+                <h3><a href="https://tuebingen.ai/" target="_blank">Tübingen AI Center</a></h3>
+                <p class="role-date">Student Researcher, February 2026 - Present</p>
+                <p>Designing intelligent interfaces for scientific publication interaction, focusing on how AI systems can facilitate researcher understanding and engagement with research outputs.</p>
+            </div>
 
-                <a href="https://www.deutschlandstipendium.de/" target="_blank" class="link-box">
-                    <img src="assets/Logo-Deutschlandstipendium-1.jpg" alt="Deutschlandstipendium Logo">
-                    <p>Recipient of the Germany Scholarship</p>
-                </a>
+            <div class="experience-item">
+                <h3><a href="https://uni-tuebingen.de" target="_blank">University of Tübingen</a> - Effekt Research Group</h3>
+                <p class="role-date">Student Research Assistant, April 2025 - October 2025</p>
+                <p>Developed an AI-assisted programming environment for the Effekt programming language. Created a VS Code extension integrating static compiler information with autonomous code generation agents, enabling context-aware intelligent code suggestions through a novel typed placeholder interface.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3><a href="https://www.marelli.com" target="_blank">Marelli Automotive Lighting</a></h3>
+                <p class="role-date">Software Engineer (Working Student), March 2024 - October 2024</p>
+                <p>Optimized a large-scale engineering system, reducing critical load time from 60 seconds to 5 seconds through systematic performance analysis and architectural improvements. Focused on scalable system design and real-time software reliability for automotive applications.</p>
             </div>
         </section>
-        <section id="blog" class="content-section fade-in">
-            <p><a href="sites/BlogMainPage.html" class="small-blog-link">Check out my blog →</a></p>
+
+        <section id="education" class="content-section">
+            <h2>Education</h2>
+
+            <div class="education-item">
+                <h3><a href="https://uni-tuebingen.de" target="_blank">University of Tübingen</a></h3>
+                <p class="degree">B.Sc. Computer Science, October 2023 - June 2026</p>
+                <p>Grade: 1.2</p>
+                <p>Thesis: Viewpoint-aware animal re-identification from drone images</p>
+                <p>Specialization: Artificial intelligence, programming language design, machine learning systems</p>
+            </div>
+
+            <div class="education-item">
+                <h3><a href="https://www.su.se" target="_blank">Stockholm University</a></h3>
+                <p class="degree">Exchange Semester - Computer Science, August 2025 - February 2026</p>
+                <p>Advanced courses in machine learning and AI systems:</p>
+                <ul>
+                    <li>Data Science (Grade A)</li>
+                    <li>Embedded Machine Learning (Grade A)</li>
+                    <li>Explainable AI (Grade A)</li>
+                    <li>Quantum Computing (Grade A)</li>
+                </ul>
+            </div>
         </section>
 
-        <section id="rust-paper" class="content-section fade-in">
-            <a href="assets/Memory_safety_through_Linearity__Ownership___Borrowing.pdf" target="_blank" class="section-link">
-                <h2>📝 My Termpaper on Rust</h2>
-                <p>
-                    I wrote a termpaper about Rust, memory safety, and modern programming concepts. Click to read or download!
-                </p>
-             
-            </a>
+        <section id="awards" class="content-section">
+            <h2>Awards & Recognition</h2>
+            <ul class="awards-list">
+                <li>Deutschlandstipendium (Germany Scholarship), 2025-2027</li>
+                <li>Amazon Future Engineer Program, 2025-2027</li>
+                <li>Erasmus+ Exchange Scholarship</li>
+            </ul>
         </section>
 
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jakub-schwenkbeck" target="_blank">https://www.linkedin.com/in/jakub-schwenkbeck</a></p>
+            <p>GitHub: <a href="https://github.com/JakubSchwenkbeck" target="_blank">github.com/JakubSchwenkbeck</a></p>
+            <p>Location: Tübingen, Germany</p>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>Connect with me on <a href="https://linkedin.com/in/Jakub-Schwenkbeck" target="_blank">LinkedIn</a></p>
-        <p><span>█</span> Built with <span>⌨️</span>, <span>🖱️</span> and <span>☕</span> in VSCode.</p>
+        <p>Connect on <a href="https://www.linkedin.com/in/jakub-schwenkbeck" target="_blank">LinkedIn</a> | <a href="https://github.com/JakubSchwenkbeck" target="_blank">GitHub</a></p>
+        <p>&copy; 2026 Jakub Schwenkbeck. All rights reserved.</p>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/terminal.js"></script>
-    <script>
-        // Theme toggle
-        // lstorage
-        if (localStorage.getItem('theme') === 'light') {
-        document.body.classList.add('light-mode');
-        document.getElementById("theme-toggle").textContent = "☀️";
-        }
-
-        // Toggle logic
-        document.getElementById("theme-toggle").addEventListener("click", () => {
-        const isLight = document.body.classList.toggle("light-mode");
-        localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        document.getElementById("theme-toggle").textContent = isLight ? "☀️" : "🌙";
-        });
-
-
-        // Live Clock
-        function updateTime() {
-            const timeElement = document.getElementById('current-time');
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
-            timeElement.textContent = `Current time: ${hours}:${minutes}:${seconds}`;
-        }
-        setInterval(updateTime, 1000);
-        updateTime();
-
-        // Fade-in animations
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = { threshold: 0.3 };
-
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('appear');
-                observer.unobserve(entry.target);
-            });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
-    </script>
-
-    <!-- Bonus fade-in CSS -->
-    <style>
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in.appear {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
 
 </body>
 </html>

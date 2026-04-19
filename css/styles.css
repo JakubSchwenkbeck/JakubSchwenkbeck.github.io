@@ -1,0 +1,573 @@
+/* ============================================
+   JAKUB SCHWENKBECK PORTFOLIO - UNIFIED STYLES
+   ============================================ */
+
+/* ============================================
+   1. GLOBAL STYLES & VARIABLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Root Variables */
+:root {
+    --background: #ffffff;
+    --primary: #f8f9fa;
+    --secondary: #f0f2f5;
+    --accent: #2c3e50;
+    --accent-light: #3498db;
+    --text: #2c3e50;
+    --text-light: #555555;
+    --border: #e0e0e0;
+    --border-light: #f0f0f0;
+    
+    /* Typography */
+    --font-serif: 'Georgia', 'Garamond', serif;
+    --font-sans: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', sans-serif;
+    --font-mono: 'Menlo', 'Monaco', 'Courier New', monospace;
+}
+
+/* Body */
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* ============================================
+   2. ANIMATIONS
+   ============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+a, button {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+img {
+    transition: opacity 0.2s ease;
+}
+
+/* ============================================
+   3. TYPOGRAPHY
+   ============================================ */
+
+h1 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* Links */
+a {
+    color: var(--accent-light);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+}
+
+a:hover {
+    border-bottom-color: var(--accent-light);
+}
+
+a:visited {
+    color: var(--accent-light);
+}
+
+/* Emphasis */
+strong {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+em {
+    font-style: italic;
+}
+
+/* Code */
+pre {
+    background: var(--secondary);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: var(--secondary);
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: var(--accent-light);
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* Nested lists */
+ul ul, ol ul, ul ol, ol ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+ul ul li, ol ul li {
+    margin-left: 0;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 3px solid var(--accent-light);
+    padding-left: 1rem;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* ============================================
+   4. IMAGES
+   ============================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    transition: opacity 0.2s ease;
+    display: block;
+}
+
+img:hover {
+    opacity: 0.9;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--border);
+    flex-shrink: 0;
+}
+
+/* ============================================
+   5. LAYOUT
+   ============================================ */
+
+/* Header */
+header {
+    width: 100%;
+    background: var(--primary);
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-light);
+    border-bottom: none;
+}
+
+/* Hero Section */
+.hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background: var(--background);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+}
+
+/* Main Content */
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background: var(--primary);
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.3s ease;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+.content-section {
+    padding: 40px 30px;
+}
+
+.content-section:first-of-type {
+    padding-top: 0;
+}
+
+/* Experience Items */
+.experience-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.role-date {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Education Items */
+.education-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.education-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.degree {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Custom Lists */
+.research-list,
+.awards-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.research-list li,
+.awards-list li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-left: 0;
+}
+
+.research-list li::before,
+.awards-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-light);
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   6. COMPONENTS
+   ============================================ */
+
+.links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.link-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.link-box:hover {
+    border-color: var(--accent-light);
+    background-color: var(--secondary);
+}
+
+.link-box img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.link-box p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: var(--primary);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.small-text {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* ============================================
+   7. RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets and Large Phones (768px and below) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 40px 20px;
+        gap: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .content-section {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+/* Small Phones (480px and below) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .nav-title {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        gap: 8px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .content-section {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .experience-item,
+    .education-item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    ul, ol {
+        margin-left: 1rem;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+}
