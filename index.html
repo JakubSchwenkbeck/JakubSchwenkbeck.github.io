@@ -15,24 +15,23 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <h1 class="nav-title">Jakub Schwenkbeck</h1>
-        </nav>
-
+    
         <div class="hero">
             <img src="assets/linked_in_picture.png" alt="Profile Picture" class="profile-pic">
             <div class="hero-text">
                 <h1>Jakub Schwenkbeck</h1>
-                <p class="subtitle">Computer Science Student, University of Tübingen</p>
-                <p class="subtitle">Bachelor's Thesis, Max Planck Institute for Intelligent Systems</p>
+                <p class="subtitle">Master's Student in Machine Learning, KTH Royal Institute of Technology</p>
+                <p class="subtitle">Background in Applied AI, Edge Computing & Robotic Perception</p>
+                <p class="hero-location" style="margin-top: 10px; font-weight: 500; color: #555;">📍 Stockholm, Sweden | 🕒 <span id="live-clock"></span></p>
             </div>
         </div>
     </header>
 
     <main>
-        <section id="about" class="content-section">
+       <section id="about" class="content-section">
             <h2>About</h2>
-            <p>I am a final-year Computer Science student at the University of Tübingen, currently conducting my bachelor's thesis at the Max Planck Institute for Intelligent Systems (MPI-IS), Flight Robotics and Perception Group. My research focuses on computer vision for robotics and efficient machine learning systems for edge deployment.</p>
+            <p>I am a Master's student in Machine Learning at KTH in Stockholm with a background in applied AI, edge computing, and robotic perception. During the final year of my Computer Science Bachelor's, I researched at the Perceiving Systems Department in the Max Planck Institute for Intelligent Systems (MPI-IS), developing machine learning models for edge-based drone perception and realistic dynamic simulation environments.</p>
+            <p>Additionally, my experience spans building AI automation pipelines at the Tübingen AI Center, developing AI developer tools for VS Code, and optimizing large-scale software in the automotive industry.</p>
         </section>
 
         <section id="research" class="content-section">
@@ -46,39 +45,41 @@
             </ul>
         </section>
 
-        <section id="current-research" class="content-section">
-            <h2>Current Research</h2>
-            <h3>Bachelor Thesis: Viewpoint-Aware Animal Re-Identification</h3>
+        <section id="featured-research" class="content-section">
+            <h2>Featured Research</h2>
+            <h3>Bachelor Thesis: Viewpoint Estimation for Animal Re-Identification on Edge Devices</h3>
             <p><em>Flight Robotics & Perception Group, <a href="https://is.mpg.de/" target="_blank">Max Planck Institute for Intelligent Systems</a></em></p>
-            <p>At the Flight Robotics and Perception group, I am developing a novel AI solution to enhance animal re-identification in the RAPID pipeline. My work focuses on integrating a 2D pose estimator and a specialized viewpoint estimation module to address perspective-based mismatches. The project emphasizes efficient edge deployment, ensuring high-accuracy orientation filtering and real-time inference speeds for drone-based hardware.</p>
-            <p><em>Supervisors: Prof. <a href="https://www.cvlibs.net/" target="_blank">Andreas Geiger</a>, Jun. Prof. Dr. <a href="https://is.mpg.de/ps/person/aahmad" target="_blank">Aamir Ahmad</a>, PhD student <a href="https://is.mpg.de/ps/person/azabo" target="_blank">András Zábó</a></em></p>
+            <p>Developed a lightweight, two-stage computer vision pipeline for edge platforms that extracts 2D pose data and utilizes a neural network to estimate the azimuth angle ($\phi$) of equids. This module mitigates perspective-based mismatches for animal re-identification from UAVs. The system achieved <strong>86.7% accuracy</strong> running at <strong>27 FPS</strong> on edge hardware, maintaining a 9 FPS full-system throughput within the RAPID pipeline.</p>
+            <ul>
+                <li><strong>Research Output:</strong> Manuscript in preparation targeting submission to ICRA 2027.</li>
+                <li><strong>Code:</strong> <a href="https://github.com/robot-perception-group/viewpoint-estimation" target="_blank">GitHub Repository</a></li>
+            </ul>
+            <p><em>Supervisors: Jun. Prof. Dr. <a href="https://is.mpg.de/ps/person/aahmad" target="_blank">Aamir Ahmad</a> and <a href="https://is.mpg.de/ps/person/azabo" target="_blank">András Zábó</a> | Examiner: Prof. <a href="https://www.cvlibs.net/" target="_blank">Andreas Geiger</a></em></p>
         </section>
 
         <section id="experience" class="content-section">
             <h2>Experience</h2>
-
-            <div class="experience-item">
+<div class="experience-item">
                 <h3><a href="https://is.mpg.de/" target="_blank">Max Planck Institute for Intelligent Systems</a></h3>
-                <p class="role-date">Student Researcher - GRADE Project, February 2026 - Present</p>
-                <p>Building realistic dynamic simulation environments for robotics research, enabling high-quality synthetic data generation and advanced perception system validation.</p>
+                <p class="role-date">Research Assistant - Robotic Simulation (GRADE), February 2026 - June 2026</p>
+                <p>Generated realistic, animated dynamic simulation environments to support advanced robotic simulation and perception tasks, enabling the extraction of high-quality synthetic data.</p>
             </div>
 
             <div class="experience-item">
                 <h3><a href="https://tuebingen.ai/" target="_blank">Tübingen AI Center</a></h3>
-                <p class="role-date">Student Researcher, February 2026 - Present</p>
-                <p>Designing intelligent interfaces for scientific publication interaction, focusing on how AI systems can facilitate researcher understanding and engagement with research outputs.</p>
+                <p class="role-date">Research Assistant - Machine Learning Engineering, February 2026 - July 2026</p>
+                <p>Engineered AI and data orchestration pipelines using n8n to autonomously process new scientific publications. Partnered with the core software engineering team to build and deploy the production backend, fully automating the retrieval, management, and dynamic presentation of the AI Center's research portfolio.</p>
             </div>
 
             <div class="experience-item">
-                <h3><a href="https://uni-tuebingen.de" target="_blank">University of Tübingen</a> - Effekt Research Group</h3>
-                <p class="role-date">Student Research Assistant, April 2025 - October 2025</p>
-                <p>Developed an AI-assisted programming environment for the Effekt programming language. Created a VS Code extension integrating static compiler information with autonomous code generation agents, enabling context-aware intelligent code suggestions through a novel typed placeholder interface.</p>
+                <h3><a href="https://uni-tuebingen.de" target="_blank">University of Tübingen</a></h3>
+                <p class="role-date">Research Assistant - AI Developer Tools (Effekt), April 2025 - October 2025</p>
+                <p>Developed an AI assistant for the Effekt language's VS Code extension, integrated via MCP and powered by static compiler data for accurate, context-aware support. Implemented a Holes Panel that displays placeholder positions with in-scope bindings and expected types to feed structured input to the assistant.</p>
             </div>
 
             <div class="experience-item">
-                <h3><a href="https://www.marelli.com" target="_blank">Marelli Automotive Lighting</a></h3>
-                <p class="role-date">Software Engineer (Working Student), March 2024 - October 2024</p>
-                <p>Optimized a large-scale engineering system, reducing critical load time from 60 seconds to 5 seconds through systematic performance analysis and architectural improvements. Focused on scalable system design and real-time software reliability for automotive applications.</p>
+                <h3><a href="https://uni-tuebingen.de" target="_blank">University of Tübingen</a></h3>
+                <p class="role-date">Academic Tutor, October 2024 - March 2025</p>
             </div>
         </section>
 
@@ -86,10 +87,15 @@
             <h2>Education</h2>
 
             <div class="education-item">
+                <h3><a href="https://www.kth.se/en" target="_blank">KTH Royal Institute of Technology</a></h3>
+                <p class="degree">M.Sc. Machine Learning, August 2026 - July 2028</p>
+            </div>
+
+            <div class="education-item">
                 <h3><a href="https://uni-tuebingen.de" target="_blank">University of Tübingen</a></h3>
                 <p class="degree">B.Sc. Computer Science, October 2023 - June 2026</p>
                 <p>Grade: 1.2</p>
-                <p>Thesis: Viewpoint-aware animal re-identification from drone images</p>
+                <p>Thesis: Viewpoint Estimation for Animal Re-Identification on Edge Devices</p>
                 <p>Specialization: Artificial intelligence, programming language design, machine learning systems</p>
             </div>
 
@@ -119,7 +125,6 @@
             <h2>Contact</h2>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/jakub-schwenkbeck" target="_blank">https://www.linkedin.com/in/jakub-schwenkbeck</a></p>
             <p>GitHub: <a href="https://github.com/JakubSchwenkbeck" target="_blank">github.com/JakubSchwenkbeck</a></p>
-            <p>Location: Tübingen, Germany</p>
         </section>
     </main>
 
@@ -129,6 +134,26 @@
     </footer>
 
     <!-- Scripts -->
-
+<script>
+        function updateClock() {
+            const clockElement = document.getElementById('live-clock');
+            if (clockElement) {
+                const now = new Date();
+                const options = { 
+                    timeZone: 'Europe/Stockholm', 
+                    hour: '2-digit', 
+                    minute: '2-digit', 
+                    second: '2-digit',
+                    hour12: false
+                };
+                const timeString = now.toLocaleTimeString('en-GB', options);
+                clockElement.textContent = timeString + " CET";
+            }
+        }
+        
+        // Update immediately, then every second
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
 </body>
 </html>
